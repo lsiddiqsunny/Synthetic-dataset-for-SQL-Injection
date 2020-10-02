@@ -1,0 +1,2 @@
+﻿No,Problem,Solution,setObject
+1,"""SELECT * FROM Employees where id=""+id1","""SELECT * FROM Employees where id=?""",id1
