@@ -9,13 +9,13 @@ aftercode1_3 = "\t\tstmt.execute"
 aftercode1_4  = "();\n\t}\n}"
 
 
-beforecode2_1 = "public class Dummy {\n"+"void sendRequest(Connection conn) throws SQLException {\n"+"\t\tStatement stmt = conn.createStatement();\n\t\tResultSet rs = stmt.execute"
+beforecode2_1 = "public class Dummy {\n"+"void sendRequest(Connection conn) throws SQLException {\n"+"\t\tStatement stmt = conn.createStatement();\n\t\tstmt.execute"
 beforecode2_2 = "("
 beforecode2_3 = ");\n\t}\n}"
 
 aftercode2_1 = "public class Dummy {\n"+"void sendRequest(Connection conn) throws SQLException {\n"+"\t\tPreparedStatement stmt = conn.prepareStatement("
 aftercode2_2 = ");\n"
-aftercode2_3 = "\t\tResultSet rs = stmt.execute"
+aftercode2_3 = "\t\tstmt.execute"
 aftercode2_4 = "();\n\t}\n}"
 
 
