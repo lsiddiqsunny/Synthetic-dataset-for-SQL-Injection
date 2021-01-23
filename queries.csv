@@ -1,544 +1,560 @@
-after_10\String1.txt,"""Select * from User where userName=? and password=?""",login.getUserName(),login.getPassword()
-after_102\String1.txt,"""DELETE FROM ingresso WHERE id=?""",id
-after_103\String1.txt,"""SELECT * "" + ""FROM (SELECT id, pwd, name, phone, email, address, memo, rating, rownum as num FROM member) "" + ""WHERE num >= ? AND num <= ?""",start,end
-after_104\String1.txt,"""UPDATE member SET memo=?, rating=? WHERE id=?""",memo,rating,id
-after_105\String1.txt,"""UPDATE member SET memo=?, rating=? WHERE id=?""",memos[i],Integer.parseInt(ratings[i]),ids[i]
-after_106\String1.txt,"""DELETE FROM member WHERE id=?""",strId
-after_107\String1.txt,"""DELETE FROM bespeak WHERE order_num=?""",order_num
-after_109\String1.txt,"""SELECT title FROM book WHERE no = ?""",b.getNo()
-after_11\String1.txt,"""INSERT INTO Resurse_Financiare  VALUES(?,?,?)""",rf.getDescriere(),rf.getSuma(),tip
-after_110\String1.txt,"""INSERT INTO member (account,passwd,realname) VALUES (?,?,?)""",account,passwd,realName
-after_111\String1.txt,"""SELECT * FROM member WHERE account=? AND passwd=?""",account,passwd
-after_112\String1.txt,"""UPDATE ingresso SET local=?, datahora=?, lugar=?, quantidade=?, idcategoria=?, idtipoingresso=?, valor=? WHERE id=?""",adulto.getLocal(),new java.sql.Date(adulto.getDataHora().getTime()),adulto.getLugar(),adulto.getQuantidade(),adulto.getCategoria().getId(),adulto.getTipoIngresso().getId(),adulto.getValor(),adulto.getId()
-after_113\String1.txt,"""insert into mensagem(de, para, mensagem) values(?,?,?)""",msg.getDeEmail(),msg.getParaEmail(),msg.getMensagem()
-after_115\String1.txt,"""delete from mensagem where id = '?'""",id
-after_117\String1.txt,"""SELECT * FROM ingresso WHERE id=?""",codigo
-after_118\String1.txt,"""SELECT * FROM message WHERE to_id = ? ORDER BY sent_date DESC""",mid
-after_119\String1.txt,"""SELECT * FROM message WHERE to_id = ? ORDER BY sent_date ASC""",mid
-after_12\String1.txt,"""Insert into User(id,firstName,lastName,userName,email,password,mobileNo) values(?,?,?,?,?,?,?)""",userInfo.getId(),userInfo.getFirstName(),userInfo.getLastName(),userInfo.getUserName(),userInfo.getEmail(),userInfo.getPassword(),userInfo.getMobileNo()
-after_122\String1.txt,"""SELECT * FROM message WHERE from_id = ? ORDER BY sent_date DESC""",mid
-after_126\String1.txt,"""UPDATE message SET been_read=1 WHERE message_id=?""",mBean.getMessageId()
-after_127\String1.txt,"""UPDATE message SET been_read=1 WHERE message_id=?""",mBean.getMessageId()
-after_128\String1.txt,"""SELECT * FROM message WHERE original_msg_id=?""",refID
-after_13\String1.txt,"""Select * from User where userName=? """,userName
-after_130\String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_DATA + "","" + FIELD_TIPO + "","" + FIELD_TBL + "") values(?,?,?)""",new Timestamp(System.currentTimeMillis()),modifica.getTipo(),modifica.getTabella()
-after_131\String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_DATA + "" >= ? """,data
-after_132\String1.txt,"""INSERT INTO ModRgl (codeModRgl, nomModRgl) VALUES (?, ?)""",obj.getCodeModRgl(),obj.getNomModRgl()
-after_133\String1.txt,"""DELETE FROM ModRgl WHERE id = ?""",obj.getId()
-after_134\String1.txt,"""UPDATE ModRgl SET codeModRgl = ?, nomModRgl = ? WHERE id = ?""",obj.getCodeModRgl(),obj.getNomModRgl(),obj.getId()
-after_135\String1.txt,"""SELECT * FROM ModRgl WHERE id = ?""",id
-after_136\String1.txt,"""SELECT * FROM ModRgl WHERE codeModRgl = ?""",code
-after_137\String1.txt,"""SELECT * FROM service_order "" + ""WHERE memberid = ? AND expiration_date IS null "" + ""ORDER BY need_by_date DESC""",id
-after_138\String1.txt,"""SELECT * FROM service_order "" + ""WHERE expiration_date IS null AND id = ?""",id
-after_14\String1.txt,"""delete from Resurse_Financiare where id=?""",id
-after_141\String1.txt,"""INSERT INTO service_order "" + ""(memberid, service_group, service_type_mow, service_type_edge, service_type_rake, "" + ""instruction, need_by_date, create_user_name, create_date, change_user_name, change_date)"" + ""VALUES (?,?,?,?,?,?,?,?,?,?,?)""",serviceOrder.getId(),serviceOrder.getServiceGroup(),serviceOrder.getServiceTypeMow(),serviceOrder.getServiceTypeEdge(),serviceOrder.getServiceTypeRake(),serviceOrder.getInstruction(),new java.sql.Date(serviceOrder.getNeedByDate().getTime()),"""javauser""",GenericUtilities.getCurrentTimeStamp(),"""javauser""",GenericUtilities.getCurrentTimeStamp()
-after_142\String1.txt,"""UPDATE service_order "" + ""SET expiration_date = ?, change_user_name = javauser, change_date = ?"" + ""WHERE id = ?""",new java.sql.Date(new java.util.Date().getTime()),GenericUtilities.getCurrentTimeStamp(),serviceId
-after_143\String1.txt,"""UPDATE service_order "" + ""SET need_by_date = ?, service_type_mow = ?, service_type_edge = ?, "" + ""service_type_rake = ?, instruction = ?, change_user_name = javauser, change_date = ? "" + ""WHERE id = ?""",new java.sql.Date(serviceOrder.getNeedByDate().getTime()),serviceOrder.getServiceTypeMow(),serviceOrder.getServiceTypeEdge(),serviceOrder.getServiceTypeRake(),serviceOrder.getInstruction(),GenericUtilities.getCurrentTimeStamp(),serviceOrder.getId()
-after_144\String1.txt,"""UPDATE users "" + ""SET password = ?, change_user_name = javauser, change_date = ?"" + ""WHERE id = ?""",passwordBean.getPassword1(),GenericUtilities.getCurrentTimeStamp(),userId
-after_15\String1.txt,"""SELECT COURSEID ,COURSENAME,UUIDS,ROOMID,COURSERDATE FROM course WHERE TEACHER=? AND (ROOMID IS NOT NULL AND ROOMID<>'') """,teachername
-after_153\String1.txt,"""select * from movie_feature where movie_id = ?""",movie_id
-after_154\String1.txt,"""INSERT INTO `movie_feature`(`movie_id`, `pic`) VALUES (?,?)""",movie_id,pic
-after_155\String1.txt,"""SELECT * FROM `movie_feature` WHERE datepost < CURRENT_TIMESTAMP order by datepost desc LIMIT 0,?""",NoPage
-after_156\String1.txt,"""DELETE FROM `movie_feature` where movie_id = ?""",movie_id
-after_158\String1.txt,"""SELECT mp.* FROM `movie_pic` mp JOIN movie m on m.movie_id = mp.movie_id WHERE m.movie_id = ?""",id
-after_159\String1.txt,"""insert into inception_music "" + ""( musicName, musicStyle,"" + "" musicLanguage, artistName, albumName, "" + ""musicUrl, imageUrl, lyrics, "" + ""publishDate, description, "" + ""uploadedBy, uploadDate, fileLength, musicLength) "" + ""values (? , ? , ? , ? , ?, ?, ?, ? , ? , ?, ?, ?, ?, ?)""",m.getMusicName(),m.getMusicStyle(),m.getMusicLanguage(),m.getArtistName(),m.getAlbumName(),m.getMusicUrl(),m.getImageUrl(),m.getLyrics(),m.getPublishDate(),m.getDescription(),m.getUploadedBy(),DateUtil.getDateTime(),m.getFileLength(),m.getMusicLength()
-after_16\String1.txt,"""Insert into ? (Username,Password) values(? , ?);""",dbTableName,username,password
-after_160\String1.txt,"""update inception_music set CTR = CTR + 1 where id = ?""",id
-after_161\String1.txt,"""update inception_music set CTR = CTR + 1 where musicUrl = ?""",musicUrl
-after_162\String1.txt,"""delete from inception_music where id = ?""",id
-after_163\String1.txt,"""select * from inception_music where id = ?""",id
-after_164\String1.txt,"""select * from inception_music where musicUrl = ?""",url
-after_165\String1.txt,"""update inception_music set musicName = ?, musicStyle = ?,"" + "" musicLanguage = ?, artistName = ?, albumName = ? where id = ?""",music.getMusicName(),music.getMusicStyle(),music.getMusicLanguage(),music.getArtistName(),music.getAlbumName(),music.getId()
-after_166\String1.txt,"""update inception_music set imageUrl = ? where id = ?""",m.getImageUrl(),m.getId()
-after_167\String1.txt,"""select * from inception_music where musicUrl = ?""",url
-after_168\String1.txt,"""update inception_music set lyrics = ? where id = ?""",lrc,id
-after_169\String1.txt,"""select * from inception_music where albumName = ?""",album
-after_17\String1.txt,"""Select Password from ? where Username = ?;""",dbTableName,username
-after_170\String1.txt,"""select * from inception_music where albumName = ?""",album
-after_171\String1.txt,"""update userinfo set pw=?, email=? where id=? and pw=?""",cpw,email,id,pw
-after_172\String1.txt,"""update member set islogin=0 where id=?""",dbid
-after_173\String1.txt,"""insert into book values (?, '?', ?)""",id,book.getName(),book.getIdAuthor()
-after_175\String1.txt,"""SELECT id,idAuthor FROM book where name='?'""",bookName
-after_176\String1.txt,"""delete FROM book where id = ? and name= '?'""",book.getId(),book.getName()
-after_177\String1.txt,"""update Book set name = '?', idAuthor =?where id =?""",book.getName(),book.getIdAuthor(),book.getId()
-after_178\String1.txt,"""SELECT * from shipping.ica_couriers where subo in (?)""",suborder
-after_179\String1.txt,"""insert into Guitar(serialNumber,price,builder,type,backWood,topWood) values(?,?,?,?,?,?)""",guitar.getSerialNumber(),guitar.getPrice(),guitar.getSpec().getBuilder(),guitar.getSpec().getType(),guitar.getSpec().getBackWood(),guitar.getSpec().getTopWood()
-after_18\String1.txt,"""UPDATE Resurse_Financiare  SET descriere=?, suma=?, tip=? where id=?""",rf.getDescriere(),rf.getSuma(),tip,rf.getId()
-after_180\String1.txt,"""select * from guitar where type= ? """,type
-after_181\String1.txt,"""delete from guitar where SerialNumber = ?""",SerialNumber
-after_182\String1.txt,"""insert into TB_DATE values ( ?, ?, ?, ?, ?)""",record.getdYear4(),new java.sql.Date(record.getdDate().getTime()),new java.sql.Timestamp(record.getdDatetime().getTime()),new java.sql.Timestamp(record.getdTimestamp().getTime())
-after_183\String1.txt,"""update ? set ? = last_insert_id(? + ?)""",getIncrementerName(),columnName,columnName,getCacheSize()
-after_184\String1.txt,"""insert into TB_DATE values ( ?, ?, ?, ?, ?)""",record.getdYear4(),new java.sql.Date(record.getdDate().getTime()),new java.sql.Timestamp(record.getdDatetime().getTime()),new java.sql.Timestamp(record.getdTimestamp().getTime())
-after_185\String1.txt,"""update TB_DATE set d_date = ?, d_time = ?, d_datetime = ?, d_timestamp = ?"" + ""where d_year_4 = ?""",record.getdYear4(),new java.sql.Date(record.getdDate().getTime()),new java.sql.Timestamp(record.getdDatetime().getTime()),new java.sql.Timestamp(record.getdTimestamp().getTime())
-after_186\String1.txt,"""update TB_DATE set d_date = ?, d_time = ?, d_datetime = ?, d_timestamp = ?"" + ""where d_year_4 = ?""",record.getdYear4(),new java.sql.Date(record.getdDate().getTime()),new java.sql.Timestamp(record.getdDatetime().getTime()),new java.sql.Timestamp(record.getdTimestamp().getTime())
-after_187\String1.txt,"""INSERT INTO cluster_table VALUES("" + ""'?')""",cluster.getName()
-after_188\String1.txt,"""INSERT INTO template_table VALUES("" + ""'?',"" + ""'?',"" + ""'?')""",template.getName(),template.getPath(),template.getMd5()
-after_189\String1.txt,"""INSERT INTO virtual_machine_host_table VALUES("" + ""'?',"" + ""'?',"" + ""'?')""",host.getHostName(),host.getIp(),host.getNaeglingPort()
-after_19\String1.txt,"""SELECT * FROM ? WHERE stock = ?;""",tableName,stockIndex
-after_190\String1.txt,"""delete from TB_DATE where d_year_4 = ?""",dYear4
-after_192\String1.txt,"""INSERT INTO job_file_table VALUES("" + ""'?',"" + ""'?',"" + ""'?',"" + ""?,"" + ""?)""",file.getName(),job.getName(),file.getAbsolutePath(),type,status
-after_193\String1.txt,"""SELECT * FROM virtual_slave_node_table WHERE cluster='?'""",cluster
-after_195\String1.txt,"""SELECT * FROM virtual_master_node_table WHERE domain='?'""",domain
-after_196\String1.txt,"""SELECT * FROM virtual_slave_node_table WHERE domain='?'""",domain
-after_197\String1.txt,"""DELETE FROM cluster_table where name='?'""",name
-after_199\String1.txt,"""DELETE FROM virtual_master_node_table where domain='?'""",domain
-after_2\String1.txt,"""DELETE FROM COUNTRY WHERE COUNTRY_ID = ?""",country.getCountry_id()
-after_20\String1.txt,"""SELECT COURSENAME,TEACHER,ROOMID,COURSERDATE FROM course  WHERE COURSEID=?""",courseid
-after_200\String1.txt,"""SELECT * FROM virtual_machine_host_table WHERE hostname='?'""",hostname
-after_201\String1.txt,"""SELECT * FROM template_table WHERE name='?'""",name
-after_202\String1.txt,"""SELECT * FROM ndcodes WHERE Code = ?""",code
-after_203\String1.txt,"""INSERT INTO ndcodes (Code, Description) "" + ""VALUES (?,?)""",med.getNDCode(),med.getDescription()
-after_204\String1.txt,"""UPDATE ndcodes SET Description = ? "" + ""WHERE Code = ?""",med.getDescription(),med.getNDCode()
-after_205\String1.txt,"""DELETE FROM ndcodes WHERE Code=?""",med.getNDCode()
-after_207\String1.txt,"""INSERT INTO user(name,pass) VALUES(?,?)""",name,pass
-after_209\String1.txt,"""select * from ? where ?=false "" + ""order by ?""",TBL_NAME,FIELD_IS_PDI,FIELD_CODICE
-after_21\String1.txt,"""SELECT PASSWORD FROM ADMIN WHERE EMAIL LIKE ?;""",username
-after_210\String1.txt,"""select * from ? where ?=true"" + ""order by ?""",TBL_NAME,FIELD_IS_PDI,FIELD_CODICE
-after_211\String1.txt,"""select * from ? where ?= ?""",TBL_NAME,FIELD_ID,search_id
-after_212\String1.txt,"""select * from ? where ?= ?""",TBL_NAME,FIELD_ID,search_id
-after_213\String1.txt,"""select * from ? where ?= ?""",TBL_NAME,FIELD_CODICE,search_code
-after_214\String1.txt,"""select * from ? where ?=? AND ?=false order by ?""",TBL_NAME,FIELD_ID_MAPPA,search_id,FIELD_IS_PDI,FIELD_CODICE
-after_215\String1.txt,"""select * from ? where ?=? AND ?=false order by ?""",TBL_NAME,FIELD_ID_PIANO,search_id,FIELD_IS_PDI,FIELD_CODICE
-after_216\String1.txt,"""select * from ? where ?=? AND ?=true order by ?""",TBL_NAME,FIELD_ID_MAPPA,search_id,FIELD_IS_PDI,FIELD_CODICE
-after_217\String1.txt,"""insert into ? (?,?,?,?,?,?) "" + ""values(?,?,?,?,?,?)""",TBL_NAME,FIELD_CODICE,FIELD_COORD_X,FIELD_COORD_Y,FIELD_WIDTH,FIELD_ID_MAPPA,FIELD_ID_PIANO,nodo.getCodice(),nodo.getCoord_X(),nodo.getCoord_Y(),nodo.getLarghezza(),nodo.getID_mappa(),nodo.getID_piano()
-after_219\String1.txt,"""delete from ? where ?=?""",TBL_NAME,FIELD_ID,id_nodo
-after_220\String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_CODICE + "","" + FIELD_IS_PDI + "","" + FIELD_TIPO + "","" + FIELD_COORD_X + "","" + FIELD_COORD_Y + "","" + FIELD_WIDTH + "","" + FIELD_LENGTH + "","" + FIELD_ID_MAPPA + "","" + FIELD_ID_PIANO + "") values(?,?,?,?,?,?,?,?,?)""",pdi.getCodice(),pdi.getTipo(),pdi.getCoord_X(),pdi.getCoord_Y(),pdi.getLarghezza(),pdi.getLunghezza(),pdi.getID_mappa(),pdi.getID_piano()
-after_221\String1.txt,"""update ?  set ?=?, ?=?, ?=?, ?=?, ?=?, "" + +""=? "" + ""where ?=?""",TBL_NAME,FIELD_CODICE,pdi.getCodice(),pdi.getTipo(),FIELD_COORD_X,pdi.getCoord_Y(),FIELD_COORD_Y,pdi.getLarghezza(),FIELD_WIDTH,pdi.getLunghezza(),FIELD_LENGTH,pdi.getLunghezza(),FIELD_ID
-after_222\String1.txt,"""SELECT * FROM notes WHERE id_user = ?""",owner.getIdentifier()
-after_223\String1.txt,"""insert into ?(?) values(?)""",TBL_NAME,FIELD_EMERG
-after_224\String1.txt,"""insert into ?(?) values(?)""",TBL_NAME,FIELD_EMERG
-after_225\String1.txt,"""SELECT * FROM npc WHERE npc_id = ?""",id
-after_226\String1.txt,"""SELECT * FROM npc WHERE npc_name = ?""",name
-after_227\String1.txt,"""Update npc set npc_name = ?,npc_lvl = ?, "" + ""currency = ?, job_id = ? WHERE npc_id=?""",npc.getName(),npc.getLvl(),npc.getCurrency(),npc.getJobClass(),npc.getId()
-after_228\String1.txt,"""SELECT * FROM officeVisit WHERE patientMID=?""",patientID
-after_229\String1.txt,"""SELECT * FROM officeVisit WHERE visitID=?""",id
-after_230\String1.txt,"""SELECT DateOfBirth FROM patients WHERE MID=?""",patientMID
-after_231\String1.txt,"""INSERT INTO OptionVisite (id, label, niveau, parent, type, typeB) VALUES (?, ?, ?, ?, ?, ?)""",obj.getId(),obj.getLabel(),obj.getNiveau(),obj.getParent(),obj.getType(),obj.getTypeB()
-after_232\String1.txt,"""DELETE FROM OptionVisite WHERE id = ?""",obj.getId()
-after_233\String1.txt,"""UPDATE OptionVisite SET label = ?, niveau = ?, parent = ?, type = ?, typeB = ? WHERE id = ?""",obj.getLabel(),obj.getNiveau(),obj.getParent(),obj.getType(),obj.getTypeB(),obj.getId()
-after_234\String1.txt,"""SELECT * FROM OptionVisite WHERE id = ?""",id
-after_235\String1.txt,"""SELECT * FROM OptionVisite WHERE type = ? and niveau = 0""",valeur
-after_236\String1.txt,"""SELECT COUNT(*) AS nb FROM OptionVisite WHERE parent = ?""",id
-after_237\String1.txt,"""SELECT * FROM OptionVisite WHERE parent = ?""",id
-after_238\String1.txt,"""SELECT * FROM OptionVisite WHERE label = ?""",label
-after_24\String1.txt,"""SELECT * FROM ADMIN WHERE EMAIL LIKE ?;""",username
-after_240\String1.txt,"""SELECT * FROM HISTORY WHERE CUSTOMER_ID = ?""",id
-after_241\String1.txt,"""SELECT ITEM_NAME,QUANTITY,PRICE FROM HISTORY WHERE CUSTOMER_ID = ? ORDER BY ORDER_ID DESC""",id
-after_242\String1.txt,"""INSERT INTO OrderList(bid,pid) "" + ""VALUES (?,?)""",orderlist.getBid(),orderlist.getPid()
-after_243\String1.txt,"""INSERT INTO ActivityBooking(id, guestId, date, status) VALUES ('?','?','?','?')""",nextActivityBookingId,acticityBookingObj.getGuest().getId(),acticityBookingObj.getDate(),acticityBookingObj.getStatus()
-after_244\String1.txt,"""UPDATE ActivityBooking SET "" + "" status= '?' "" + ""WHERE id= '?'""",activityBookingObj.getStatus(),activityBookingObj.getId()
-after_245\String1.txt,"""SELECT * FROM `order_movie` where order_id = ?""",order_id
-after_246\String1.txt,"""DELETE FROM ActivityBooking WHERE id= '?'""",id
-after_247\String1.txt,"""SELECT * FROM `order_movie` where order_id = ?""",order_id
-after_248\String1.txt,"""SELECT * FROM course WHERE idcourse != ? ORDER BY courname;""",oldCourseId
-after_249\String1.txt,"""insert into atm_user"" + ""(id,userName,idCardNumber,gender,birthday,address,balance,account, password,type,state,remark)"" + ""value (?,?,?,?,?,?,?,?,?,?,?,?)""",user.getId(),user.getUserName(),user.getIdCardNumber(),user.getGender(),date,user.getAddress(),user.getBalance(),user.getAccount(),user.getPassword(),user.getType(),user.getState(),user.getRemark()
-after_250\String1.txt,"""DELETE FROM ActivityBooking WHERE guestId= '?' AND date= '?'""",guestId,data
-after_254\String1.txt,"""select * from tablesr where dbname='?'""",tableeasy.MainActivity.databases[tableeasy.MainActivity.selecteddata]
-after_255\String1.txt,"""SELECT title,docfile FROM document WHERE iddocument = ?""",selFile.getDocid()
-after_256\String1.txt,"""SELECT COUNT(*) AS activityBokingInstances FROM ActivityBooking "" + "" WHERE date='?' AND guestId='?' AND status<>'Canceled'""",data,guestId
-after_257\String1.txt,"""SELECT docfile FROM document WHERE iddocument = ?""",selFile.getDocid()
-after_258\String1.txt,"""SELECT docfile FROM document WHERE iddocument = ?""",selFile.getDocid()
-after_26\String1.txt,"""DELETE from ADMIN where EMAIL LIKE ?;""",email
-after_260\String1.txt,"""SELECT DISTINCT course.idcourse, courname, faculty FROM course, instrcourdoc "" + ""WHERE idinstructor = ? AND course.idcourse = instrcourdoc.idcourse ORDER BY courname""",instrId
-after_261\String1.txt,"""SELECT document.iddocument,title,uploader,uploaddate,filetype FROM instructor,document,course,instrcourdoc WHERE "" + ""instructor.idinstructor = instrcourdoc.idinstructor AND instrcourdoc.iddocument = document.iddocument AND "" + ""instrcourdoc.iddocument = document.iddocument AND instrcourdoc.idcourse = course.idcourse AND course.courname = ?"" + ""AND instructor.idinstructor = ? ORDER BY uploaddate DESC""",courseName,instrId
-after_263\String1.txt,"""DELETE FROM ActivityLine WHERE activityId= '?' AND bookingId= '?' AND date= '?' AND startHour= '?'""",activityId,bookingId,date,startHour
-after_264\String1.txt,"""INSERT INTO T_HT_ATIVIDADE (CD_ATIVIDADE, DT_ATIVIDADE, DS_ATIVIDADE, CD_USUARIO) VALUES (SQ_T_HT_ATIVIDADE.NEXTVAL, ?, ?, ?)""",data,atividadesFisicas.getDs_atividade(),atividadesFisicas.getCd_usuario()
-after_265\String1.txt,"""UPDATE T_HT_ATIVIDADE SET CD_ATIVIDADE = ?, DS_ATIVIDADE = ?, CD_USUARIO = ? WHERE CD_ATIVIDADE = ?""",atividadesFisicas.getCd_atividade(),atividadesFisicas.getDs_atividade(),atividadesFisicas.getCd_usuario(),atividadesFisicas.getCd_usuario()
-after_266\String1.txt,"""DELETE FROM T_HT_ATIVIDADE WHERE CD_ATIVIDADE = ?""",cd_atividade
-after_267\String1.txt,"""SELECT * FROM T_HT_ATIVIDADE WHERE CD_ATIVIDADE = ?""",codigoBusca
-after_268\String1.txt,"""INSERT INTO ParcClient (codeTParc, codeCliPros, quantite, date, nom) VALUES (?, ?, ?, ?, ?)""",obj.getCodeTParc(),obj.getCodeCliPros(),Integer.toString(obj.getQuantite()),"(obj.getDate() == null) ? """" : formatter.format(obj.getDate())",obj.getNom()
-after_269\String1.txt,"""DELETE FROM ParcClient WHERE id = ?""",obj.getId()
-after_27\String1.txt,"""UPDATE tblAchievements SET fldProgress=? WHERE id=?;""",newProgressResult,ID
-after_270\String1.txt,"""UPDATE ParcClient SET codeTParc = ?, codeCliPros = ?, quantite = ?, date = ?, nom = ? WHERE id = ?""",obj.getCodeTParc(),obj.getCodeCliPros(),Integer.toString(obj.getQuantite()),formatter.format(obj.getDate()),obj.getNom(),obj.getId()
-after_271\String1.txt,"""SELECT * FROM ParcClient WHERE id = ?""",id
-after_272\String1.txt,"""SELECT * FROM ParcClient WHERE codeTParc = ? AND codeCliPros = ?""",idType,codeClient
-after_274\String1.txt,"""SELECT SUM(quantite) AS nb FROM ParcClient WHERE codeTParc = ?"" + "" AND codeCliPros IN"" + ""  (SELECT cClient FROM Client WHERE cRep = ?"" + ""  OR cClient IN"" + ""    (SELECT codeCliPros FROM Revoir WHERE codeUtilisateur = ?)"" + ""  )""",codeParc,PanelStats.commercialStats.getCodeCommercial(),PanelStats.commercialStats.getId()
-after_275\String1.txt,"""SELECT SUM(quantite) AS nb FROM ParcClient WHERE codeTParc = ?"" + "" AND codeCliPros IN "" + ""  (SELECT codeProspect FROM Prospect WHERE cRep = ? "" + ""  OR codeProspect IN"" + ""    (SELECT codeCliPros FROM Revoir WHERE codeUtilisateur = ?)"" + ""  )""",codeParc,PanelStats.commercialStats.getCodeCommercial(),PanelStats.commercialStats.getId()
-after_277\String1.txt,"""SELECT COUNT(*) AS activityLineInstances1 FROM ActivityLine "" + ""WHERE activityId= '?' "" + ""AND bookingId= '?' "" + ""AND date= '?' "" + ""AND startHour= '?' "" + ""AND facilityId= '?' "" + ""AND status= '?'""",activityId,bookingId,date,startHour,facilityId,status
-after_278\String1.txt,"""update adv_pendencia.tab_pasta set statusPasta = 'ocupado' where idPasta = ?""",filtro.getPasta()
-after_279\String1.txt,"""update adv_pendencia.tab_pasta set statusPasta = 'livre' where idPasta = ?""",pendencia.getIdPasta()
-after_28\String1.txt,"""INSERT INTO "" + tableLabel + "" (fldAchievementTitle,fldProgress,fldBronzeGoal,fldSilverGoal,fldGoldGoal,fldStatus) VALUES(?,?,?,?,?,?)""",fldAchievementTitle,fldProgress,fldBronzeGoal,fldSilverGoal,fldGoldGoal,fldStatus
-after_280\String1.txt,"""SELECT firstName, lastName FROM patients WHERE MID=?""",mid
-after_281\String1.txt,"""SELECT role FROM users WHERE MID=? AND Role=?""",mid,role
-after_283\String1.txt,"""SELECT * FROM patients WHERE MID = ?""",mid
-after_284\String1.txt,"""UPDATE patients SET firstName=?,lastName=?,email=?,"" + ""address1=?,address2=?,city=?,state=?,zip=?,phone=?,"" + ""eName=?,ePhone=?,iCName=?,iCAddress1=?,iCAddress2=?,iCCity=?,"" + ""ICState=?,iCZip=?,iCPhone=?,iCID=?,DateOfBirth=?,"" + ""DateOfDeath=?,CauseOfDeath=?,MotherMID=?,FatherMID=?,"" + ""BloodType=?,Ethnicity=?,Gender=?,TopicalNotes=?, CreditCardType=?, CreditCardNumber=?, "" + ""DirectionsToHome=?, Religion=?, Language=?, SpiritualPractices=?, "" + ""AlternateName=?, DateOfDeactivation=? WHERE MID=?""",p.getMID()
-after_285\String1.txt,"""SELECT * FROM patients WHERE MID=?""",pid
-after_286\String1.txt,"""SELECT * FROM declaredhcp, personnel "" + ""WHERE PatientID=? AND personnel.MID=declaredhcp.HCPID""",pid
-after_287\String1.txt,"""INSERT INTO declaredhcp(PatientID, HCPID) VALUES(?,?)""",pid,hcpID
-after_288\String1.txt,"""SELECT COUNT(*) AS activityLineInstances2 FROM ActivityLine "" + "" WHERE date='?' AND startHour= '?' AND instructorId= '?'"" + "" AND status<>'Canceled' """,date,startHour,instructorId
-after_289\String1.txt,"""DELETE FROM declaredhcp WHERE PatientID=? AND HCPID=?""",pid,hcpID
-after_29\String1.txt,"""UPDATE tblAchievements SET fldStatus=? WHERE id=?;""",editAchievementStatus,editIDResult
-after_290\String1.txt,"""SELECT * FROM declaredhcp WHERE PatientID=? AND HCPID=?""",pid,hcpid
-after_291\String1.txt,"""SELECT patients.* FROM representatives, patients "" + ""WHERE RepresenterMID=? AND RepresenteeMID=patients.MID""",pid
-after_292\String1.txt,"""SELECT patients.* FROM representatives, patients, users "" + ""WHERE RepresenterMID=? AND RepresenteeMID=patients.MID AND users.MID=patients.MID AND users.isDependent=1""",pid
-after_293\String1.txt,"""SELECT patients.* FROM representatives, patients "" + ""WHERE RepresenteeMID=? AND RepresenterMID=patients.MID""",pid
-after_294\String1.txt,"""SELECT * FROM representatives WHERE RepresenterMID=? AND RepresenteeMID=?""",representer,representee
-after_295\String1.txt,"""INSERT INTO representatives(RepresenterMID,RepresenteeMID) VALUES (?,?)""",representer,representee
-after_296\String1.txt,"""SELECT * FROM patients WHERE MID=? AND DateOfDeactivation IS NULL""",representee
-after_297\String1.txt,"""SELECT * FROM patients WHERE MID=? AND DateOfDeactivation IS NULL""",pid
-after_298\String1.txt,"""DELETE FROM representatives WHERE RepresenterMID=? AND RepresenteeMID=?""",representer,representee
-after_299\String1.txt,"""SELECT COUNT(*) AS activityLineNumbers FROM ActivityLine "" + "" WHERE bookingId='?' AND date= '?' AND status<>'Canceled' """,bookingId,data
-after_3\String1.txt,"""Insert into Alte_Activitati_CD values(?,?,?,?,?,?,?,?,?,?)""",alteActivitati.getId_Cadru_Didactic(),alteActivitati.getPregAdmitere(),alteActivitati.getComisiiAbsolvire(),alteActivitati.getConsultatii(),alteActivitati.getExamene(),alteActivitati.getIndrLucrDisert(),alteActivitati.getIndrLucrLic(),alteActivitati.getIndrProiect(),alteActivitati.getLucrControl(),alteActivitati.getSeminariiCerc()
-after_30\String1.txt,"""UPDATE tblAchievements SET fldProgress=? WHERE id=?;""",newProgressResult,ID
-after_302\String1.txt,"""SELECT * FROM ( "" + ""SELECT DISTINCT patients.* FROM patients, declaredhcp, ovdiagnosis, officevisits, ovmedication"" + "" WHERE"" + "" declaredhcp.HCPID = ?"" + "" AND patients.MID = declaredhcp.PatientID"" + "" AND (ovdiagnosis.VisitID = officevisits.ID"" + "" AND officevisits.PatientID = declaredhcp.PatientID"" + "" AND ((ovdiagnosis.ICDCode >= ? AND ovdiagnosis.ICDCode < ?)"" + "" OR (ovdiagnosis.ICDCode >= ? AND ovdiagnosis.ICDCode < ?)"" + "" OR (ovdiagnosis.ICDCode >= ? AND ovdiagnosis.ICDCode < ?)))"" + "" UNION ALL"" + "" SELECT DISTINCT patients.* From patients, declaredhcp, ovdiagnosis, officevisits, ovmedication "" + "" WHERE"" + "" declaredhcp.HCPID = ?"" + "" AND patients.MID = declaredhcp.PatientID"" + "" AND (declaredhcp.PatientID = officevisits.PatientID"" + "" AND officevisits.ID = ovmedication.VisitID"" + "" AND ovmedication.EndDate BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)))"" + "" AS final"" + "" GROUP BY final.MID HAVING COUNT(*) = 2"" + "" ORDER BY final.lastname ASC, final.firstname ASC""",hcpMID,250.0f,251.0f,493.0f,494.0f,390.0f,460.99f,hcpMID
-after_303\String1.txt,"""SELECT users.MID AS MID, users.Role AS Role, patients.firstName AS firstName, patients.lastName AS lastName FROM users INNER JOIN patients ON users.MID = patients.MID WHERE users.MID=?;""",Long.toString(id)
-after_306\String1.txt,"""SELECT COUNT(*) AS activityLineInstances3 FROM ActivityLine "" + "" WHERE bookingId= '?' "" + ""AND date= '?' "" + ""AND startHour= '?' "" + ""AND startHour= '?' "" + ""AND status<>'Canceled' """,bookingId,date,startHour,startHour
-after_307\String1.txt,"""INSERT INTO Pays (codePays, nomPays) VALUES (?, ?)""",obj.getCodePays(),obj.getNomPays()
-after_308\String1.txt,"""DELETE FROM Pays WHERE id = ?""",obj.getId()
-after_309\String1.txt,"""UPDATE Pays SET codePays = ?, nomPays = ? WHERE id = ?""",obj.getCodePays(),obj.getNomPays(),obj.getId()
-after_31\String1.txt,"""SELECT fldProgress FROM tblAchievements WHERE id=?""",ID
-after_310\String1.txt,"""SELECT * FROM Pays WHERE id = ?""",id
-after_311\String1.txt,"""SELECT * FROM Pays WHERE codePays = ?""",code
-after_312\String1.txt,"""insert into "" + table + ""(docno,productname,reviewtitle,reviewcontent,pros,cons,reviewlink,reviewstar,reviewstarword) values(?,?,?,?,?,?,?,?,?)""",docno,pname,revtitle,revcontent,pros,cons,rlink,revstar,starword
-after_317\String1.txt,"""INSERT INTO ActivityType(id, name, maxParticipants) VALUES ('?','?','?')""",nextActivityTypeId,activityTypeObj.getName(),activityTypeObj.getMaxParticipants()
-after_318\String1.txt,"""INSERT INTO tbl_peliculas (nombre, genero, clasificacion, duracion, imagen) VALUES (?, ?, ?, ?, ?)""",entidad.getNombre(),entidad.getGenero(),entidad.getClasificacion(),entidad.getDuracion(),entidad.getImagen()
-after_319\String1.txt,"""UPDATE tbl_peliculas SET nombre = ?, genero = ?, clasificacion = ?, duracion = ?, imagen = ? WHERE pk_pelicula = ?""",entidad.getNombre(),entidad.getGenero(),entidad.getClasificacion(),entidad.getDuracion(),entidad.getImagen(),entidad.getIdPelicula()
-after_320\String1.txt,"""DELETE FROM tbl_peliculas WHERE pk_pelicula = ?""",entidad.getIdPelicula()
-after_321\String1.txt,"""SELECT * FROM tbl_peliculas WHERE nombre = ?""",id
-after_322\String1.txt,"""SELECT * FROM tbl_peliculas WHERE pk_pelicula = ?""",id
-after_323\String1.txt,"""SELECT nombre FROM tbl_peliculas WHERE nombre = ?""",entidad.getNombre()
-after_324\String1.txt,"""INSERT INTO gaurav_penalty( penalty_id , student_id , issue_date , recd_date ,  fineamount   ) VALUES ( ? ,?, ? , ?, ? ) ;""",fine.getPenalty_id(),fine.getstudent_id(),issuedate,receivedate,fine.getPenalty_amount()
-after_325\String1.txt,"""INSERT INTO adv_pendencia.tab_pedencia VALUES(null, ?,'Em aberto', ?, null, ?,?)""",filtro.getDescPendencia(),filtro.getNomPendencia(),filtro.getPasta(),data
-after_326\String1.txt,"""UPDATE ActivityType SET "" + ""name= '?', "" + ""maxParticipants= '?' "" + ""WHERE id= '?'""",activityTypeNewObj.getName(),activityTypeNewObj.getMaxParticipants(),activityTypeNewObj.getID()
-after_327\String1.txt,"""insert into personas (NOMBRE,EDAD,PESO)"" + ""values (?,?,?)""",p.getNombre(),p.getEdad(),p.getPeso()
-after_328\String1.txt,"""delete from personas where id = ?""",id
-after_329\String1.txt,"""DELETE FROM ActivityType WHERE id= '?'""",id
-after_33\String1.txt,"""DELETE FROM tblAchievements WHERE id = ?""",id
-after_330\String1.txt,"""INSERT INTO users (MID, PASSWORD, SALT, ROLE, sQuestion, sAnswer) VALUES (?,?,?,?,?,?)""",mid,hashedPassword,salt,role.toString(),"""Enter the random password given in your account email""",password
-after_331\String1.txt,"""update personas set NOMBRE=?, EDAD=?, PESO=? where id=?""",p.getNombre(),p.getEdad(),p.getPeso(),p.getId()
-after_332\String1.txt,"""select id,nombre,edad,peso from personas where id =?""",id
-after_334\String1.txt,"""UPDATE users SET sQuestion = ?, sAnswer = ? WHERE MID = ?""",question,answer,mid
-after_335\String1.txt,"""SELECT role FROM users WHERE MID=?""",mid
-after_336\String1.txt,"""SELECT DateOfDeactivation FROM patients WHERE MID=?""",mid
-after_337\String1.txt,"""UPDATE users SET password=?, salt=? WHERE MID=?""",newPassword,salt,mid
-after_338\String1.txt,"""SELECT sQuestion FROM users WHERE MID=?""",mid
-after_339\String1.txt,"""DELETE FROM ActivityType WHERE name= '"" + name + ""'""",name
-after_340\String1.txt,"""SELECT firstName, lastName FROM personnel WHERE MID=?""",mid
-after_341\String1.txt,"""SELECT MAX(users.mid) FROM users WHERE mid BETWEEN ? AND ?""",minID,maxID
-after_342\String1.txt,"""INSERT INTO personnel(MID, Role) VALUES(?,?)""",Long.valueOf(nextID).toString(),role.name()
-after_343\String1.txt,"""SELECT * FROM personnel WHERE MID = ?""",mid
-after_344\String1.txt,"""SELECT * FROM personnel WHERE MID=?""",pid
-after_345\String1.txt,"""SELECT * FROM hcpassignedhos hah,hospitals h "" + ""WHERE hah.HCPID=? AND hah.HosID=h.HospitalID ORDER BY HospitalName ASC""",mid
-after_346\String1.txt,"""SELECT DISTINCT hospitals.* FROM hcpassignedhos hah "" + ""INNER JOIN hcprelations ON hah.HCPID = hcprelations.HCP "" + ""INNER JOIN hospitals ON hah.hosID = hospitals.HospitalID "" + ""WHERE hcprelations.UAP=? ORDER BY HospitalName ASC""",mid
-after_347\String1.txt,"""SELECT sAnswer FROM users WHERE MID=?""",mid
-after_348\String1.txt,"""SELECT COUNT(*) AS activityTypeInstances FROM ActivityType "" + "" WHERE id<> '?' AND name= '?'""",id,name
-after_349\String1.txt,"""SELECT * FROM hcpassignedhos hah inner join personnel p where hah.hosID = ? and hah.HCPID = p.MID and p.role = 'hcp'""",hosid
-after_35\String1.txt,"""SELECT * FROM ADMIN WHERE EMAIL LIKE ?;""",email
-after_351\String1.txt,"""SELECT * FROM personnel WHERE MID IN (SELECT UAP FROM hcprelations WHERE HCP=?)""",hcpid
-after_352\String1.txt,"""UPDATE loginfailures SET FailureCount=FailureCount+1, lastFailure=CURRENT_TIMESTAMP WHERE IPAddress=?""",ipAddr
-after_353\String1.txt,"""UPDATE resetpasswordfailures SET failurecount=failurecount+1 WHERE ipaddress=?""",ipAddr
-after_354\String1.txt,"""SELECT * FROM resetpasswordfailures WHERE IPADDRESS=?""",ipAddr
-after_355\String1.txt,"""SELECT * FROM loginfailures WHERE IPADDRESS=?""",ipAddr
-after_356\String1.txt,"""INSERT INTO loginfailures(IPAddress, failureCount) VALUES(?,?)""",ipAddr,failureCount
-after_357\String1.txt,"""INSERT INTO resetpasswordfailures(IPAddress, failureCount) VALUES(?,?)""",ipAddr,failureCount
-after_358\String1.txt,"""UPDATE loginfailures SET failureCount=0 WHERE IPAddress=?""",ipAddr
-after_359\String1.txt,"""UPDATE loginfailures SET failureCount=0 WHERE IPAddress=?""",ipAddr
-after_360\String1.txt,"""select name from login where name='?'""",name,name,password
-after_361\String1.txt,"""UPDATE resetpasswordfailures SET failureCount=0 WHERE IPAddress=?""",ipAddr
-after_362\String1.txt,"""SELECT * FROM users WHERE MID=?""",mid
-after_363\String1.txt,"""SELECT * FROM user WHERE Login = '?' AND Password="" + ""'?'""",uname,pwd
-after_364\String1.txt,"""Select * FROM users WHERE MID=? AND password=?""",mid,DigestUtils.sha256Hex(password + salt)
-after_365\String1.txt,"""DELETE FROM credit_card WHERE cardnum = ?;""",cardNum
-after_366\String1.txt,"""SELECT smartreporter.field.Name, smartreporter.field.Size"" + "" FROM "" + ""smartreporter.field, smartreporter.template, smartreporter.user"" + "" WHERE "" + ""smartreporter.field.TemplateID=smartreporter.template.ID"" + "" AND "" + ""smartreporter.template.ACTIVE=1 "" + "" AND "" + ""smartreporter.template.User_ID="" + userID",userID
-after_367\String1.txt,"""UPDATE users SET isDependent=? WHERE MID=?""",mid
-after_368\String1.txt,"""SELECT * FROM users WHERE MID=? AND isDependent=1""",mid
-after_369\String1.txt,"""SELECT "" + column + "" FROM "" + table + "" WHERE id=?""",id
-after_37\String1.txt,"""DELETE from ITEM where ITEM_NAME LIKE ?;""",item_name
-after_370\String1.txt,"""INSERT into user(name, username, password) values('?',"" + ""'?','?')""",name,uname,pwd
-after_372\String1.txt,"""INSERT INTO "" + table + "" VALUES('', ? , ? "" + "")""",desc
-after_373\String1.txt,"""SELECT Salt FROM users WHERE MID=?""",mid
-after_374\String1.txt,"""select * from ? where ?= ?""",TBL_NAME,FIELD_ID,search_id
-after_375\String1.txt,"""select * from ? where ? = ?""",TBL_NAME,FIELD_QUOTA,quota
-after_376\String1.txt,"""INSERT OR REPLACE INTO ClassifiedCompetences (CompetenceText, Quality, Importance, Type, AdID) VALUES(?,?,?,?,?)""",competence.getCompetence(),competence.getQuality(),competence.getImportance(),competence.getType().toString(),competence.getJobAdID()
-after_377\String1.txt,"""insert into ? (?) values(?)""",TBL_NAME,FIELD_QUOTA,quota
-after_378\String1.txt,"""update ? set ?=? where ?=?""",TBL_NAME,FIELD_QUOTA,quota,id_piano
-after_379\String1.txt,"""delete from ? where ?=?""",TBL_NAME,FIELD_ID,id_piano
-after_380\String1.txt,"""INSERT INTO ingresso ( local, datahora, lugar, quantidade, idcategoria, idtipoingresso, valor) "" + ""VALUES (?,?,?,?,?,?,?)""",pista.getLocal(),new java.sql.Date(pista.getDataHora().getTime()),pista.getLugar(),pista.getQuantidade(),pista.getCategoria().getId(),pista.getTipoIngresso().getId(),pista.getValor()
-after_381\String1.txt,"""DELETE FROM ingresso WHERE id=?""",id
-after_382\String1.txt,"""UPDATE ingresso SET local=?, datahora=?, lugar=?, quantidade=?, idcategoria=?, idtipoingresso=?, valor=? WHERE id=?""",pista.getLocal(),new java.sql.Date(pista.getDataHora().getTime()),pista.getLugar(),pista.getQuantidade(),pista.getCategoria().getId(),pista.getTipoIngresso().getId(),pista.getValor(),pista.getId()
-after_383\String1.txt,"""SELECT * FROM ingresso WHERE id=?""",codigo
-after_384\String1.txt,"""INSERT INTO `sis_pizza_db`.`pizza` (`numero_pizza`, `nome_pizza`, `tipo_pizza`, `tipo_massa`, `ingredientes_pizza`, `preco_pizza`)"" + ""VALUES (?, ?, ?, ?, ?, ?);""",pizza.getNumero(),pizza.getNome(),pizza.getTipoPizza(),pizza.getTipoMassa(),pizza.getIngredientes(),pizza.getPreco()
-after_385\String1.txt,"""UPDATE `sis_pizza_db`.`pizza` SET `nome_pizza` = ?, `tipo_pizza` = ?, `tipo_massa` = ?, `ingredientes_pizza` = ?, `preco_pizza` = ?"" + ""WHERE `numero_pizza` = ?;""",pizza.getNome(),pizza.getTipoPizza(),pizza.getTipoMassa(),pizza.getIngredientes(),pizza.getPreco(),pizza.getNumero()
-after_386\String1.txt,"""DELETE FROM pizza WHERE numero_pizza = ?;""",pizza.getNumero()
-after_387\String1.txt,"""Select product_price from product_sms where product_id = ?""",order.getItemName()
-after_389\String1.txt,"""SELECT * FROM tblauthor WHERE author_name = '?'""",name
-after_39\String1.txt,"""SELECT * FROM ITEM WHERE ITEM_NAME LIKE ?;""",input
-after_390\String1.txt,"""SELECT * FROM tblauthor WHERE id = ?""",id
-after_392\String1.txt,"""INSERT INTO tblauthor(author_name, gender, description) VALUES(?, ?, ?)""",author.getAuthorName(),author.getGender(),author.getDescription()
-after_393\String1.txt,"""UPDATE tblauthor SET author_name = ?, gender = ?, description = ? WHERE id = "" + author.getId()",author.getAuthorName(),author.getGender(),author.getDescription()
-after_394\String1.txt,"""insert into nba.players(name,number,position,height,weight,birth,age,exp,school,actionimgpath,portraitimgpath)values(?,?,?,?,?,?,?,?,?,?,?)""",player.getName(),player.getNumber(),player.getPosition(),player.getHeight(),player.getWeight(),player.getBirth(),player.getAge(),player.getExp(),player.getSchool(),player.getActionImgPath(),player.getPortraitImgPath()
-after_395\String1.txt,"""delete from nba.players where name=?""",name
-after_396\String1.txt,"""select name,number,position,height,weight,birth,age,exp,school,actionimgpath,portraitimgpath,seasonsp from nba.players where name=?""",name
-after_397\String1.txt,"""update nba.players set currentteam=? where name=?""",teamAbbr,playerName
-after_399\String1.txt,"""INSERT INTO Employee(personId, salary) VALUES ('?','?')""",employeeObj.getId(),employeeObj.getSalary()
-after_4\String1.txt,"""Insert into State_de_Functii values(?,?,?,?,?,?,?,?,?,?)""",state.getIdCadruDidactic(),state.getIdDisciplina(),state.getIdSectia(),state.getAn(),state.getOreC1(),state.getOreS1(),state.getOreL1(),state.getOreC2(),state.getOreS2(),state.getOreL2()
-after_40\String1.txt,"""insert into shipping values ?, '?')""",id,n
-after_400\String1.txt,"""DELETE FROM Posizione WHERE etichetta = ? AND isil = ?""",posizione.getEtichetta(),posizione.getBiblioteca().getIsil()
-after_401\String1.txt,"""select * from pinnedposts where postid = ?""",count
-after_402\String1.txt,"""select count(*) from normalposts where authorid = ?""",userid
-after_403\String1.txt,"""select * from normalposts where authorid = ?""",userid
-after_405\String1.txt,"new StringBuilder(""SELECT * FROM "").append(tableName).append("" WHERE id = ?"").toString()",postId
-after_407\String1.txt,"""UPDATE Employee SET "" + ""salary= '?' "" + ""WHERE personId= '?'""",employeeNewObj.getSalary(),employeeNewObj.getId()
-after_409\String1.txt,"new StringBuilder(""UPDATE "").append(tableName).append("" SET message = ? WHERE id = ?"").toString()",message,postId
-after_41\String1.txt,"""SELECT player FROM stats WHERE player = '?'""",p.getUniqueId().toString()
-after_410\String1.txt,"new StringBuilder(""UPDATE "").append(tableName).append("" SET "").append(column).append("" = "").append(column).append("" + 1, points = points + "").append(Integer.toString(vote)).append("" WHERE id = ?"").toString()",postId
-after_411\String1.txt,"""select * from shares where our_result='Y' order by time desc limit ?""",Math.round(network_diff / 32.0)
-after_412\String1.txt,"""insert into candidates (first_name,last_name,dob,phone,email) values (? ,? ,? ,? ,?)""","""hina""","""nair""","""1993-02-09""","""1234567890""","""hine@gmail"""
-after_413\String1.txt,"""insert into inception_preference ( userId, musicId ) values (?, ?);""",userId,musicId
-after_414\String1.txt,"""delete from inception_preference where id = ?""",id
-after_415\String1.txt,"""select * from inception_preference where userId = ? and musicId = ?""",userId,musicId
-after_416\String1.txt,"""insert into AdvanceSearch(name,sp,city) values(?,?,?)""",Name,Specialization,City_name
-after_417\String1.txt,"""select * from inception_preference where userId = ? order by id desc limit ?, ?""",userId,start,count
-after_418\String1.txt,"""delete from inception_preference where userId = ? and musicId = ?""",userId,musicId
-after_419\String1.txt,"""select COUNT(*) from inception_preference where userId = ?""",i
-after_42\String1.txt,"""INSERT INTO `stats` (`player`, `kills`, `deaths`) VALUES ('?', '0', '0')""",p.getUniqueId().toString()
-after_420\String1.txt,"""select * from inception_preference, inception_music where inception_preference.userId = ? and inception_preference.musicId = inception_music.id""",id
-after_423\String1.txt,"""DELETE FROM Prenotazione WHERE id = '?'""",i
-after_426\String1.txt,"""SELECT COUNT(*) AS facilityInstances FROM Facility "" + "" WHERE id<> '?' AND name= '?'""",id,name
-after_428\String1.txt,"""INSERT INTO course(courname,faculty) VALUES (?,?)""",courname,facultyCourTextBox.getText()
-after_43\String1.txt,"""SELECT kills FROM stats WHERE player = '?'""",p.getUniqueId().toString()
-after_431\String1.txt,"""DELETE FROM Instructor WHERE employeeId= '?'""",employeeId
-after_434\String1.txt,"""DELETE FROM course WHERE idcourse = ?""",curCour.getId()
-after_435\String1.txt,"""INSERT INTO Location(zipcode, country, city) VALUES('?','?','?')""",loc.getZipCode(),loc.getCountry(),loc.getCity()
-after_436\String1.txt,"""UPDATE Location SET "" + ""zipCode= '?', "" + ""city= '?' "" + ""WHERE country= '?'""",loc.getZipCode(),loc.getCity(),loc.getCountry()
-after_438\String1.txt,"""INSERT INTO instructor(fname,lname,faculty,email,password) VALUES (?,?,?,?,?)""",firstNameTextBox.getText(),lastNameTextBox.getText(),facultyInstrTextBox.getText(),emailTextBox.getText(),"BCrypt.hashpw(passBox.getText(), BCrypt.gensalt())"
-after_440\String1.txt,"""DELETE FROM instructor WHERE idinstructor = ?""",curInstr.getInstrId()
-after_441\String1.txt,stringBuilder1.toString(),userAccount
-after_442\String1.txt,stringBuilder1.toString(),userPassword
-after_443\String1.txt,stringBuilder1.toString(),userAccount
-after_444\String1.txt,"""UPDATE Person SET "" + ""name='?', "" + ""zipcode='?', "" + ""country='?', "" + ""address='?', "" + ""phoneNo='?', "" + ""email='?', "" + ""personType='?', "" + ""password='?' "" + ""WHERE id='?'""",prs.getName(),prs.getZipcode(),prs.getCountry(),prs.getAddress(),prs.getPhoneNo(),prs.getEmail(),prs.getPersonType(),prs.getPassword(),prs.getId()
-after_445\String1.txt,"""DELETE FROM Person WHERE id= '?'""",prsId
-after_446\String1.txt,"""SELECT COUNT(*) AS personInstances FROM Person "" + "" WHERE id<> '?' AND name= '?' AND zipcode= '?' AND country= '?' AND address= '?'""",id,name,zipcode,country,address
-after_447\String1.txt,"""INSERT INTO Room(number, roomType)"" + "" VALUES('?','?')""",room.getNumber(),room.getRoomType().getCategory()
-after_448\String1.txt,"""DELETE FROM Room WHERE number=?""",number
-after_449\String1.txt,"""UPDATE Room SET "" + ""roomType='?' "" + ""WHERE number='?'""",r.getRoomType().getCategory(),r.getNumber()
-after_45\String1.txt,"""UPDATE stats SET death = ? WHERE player = '?'""",getKills(p) + score,uuid,getDeaths(p) + 1,uuid
-after_450\String1.txt,"""INSERT INTO RoomBooking(arrivalDate, departureDate, stts, numberOfChildren)"" + "" VALUES('?','?','?','?')""",rb.getArrivalDate(),rb.getDepartureDate(),rb.getStatus(),rb.getNumberOfChildren()
-after_451\String1.txt,"""UPDATE RoomBooking SET "" + ""arrivalDate='?', "" + ""departureDate='?', "" + ""stts='?', "" + ""numberOfChildren='?' "" + ""WHERE id='?'""",roomBooking.getArrivalDate(),roomBooking.getDepartureDate(),roomBooking.getStatus(),roomBooking.getNumberOfChildren(),roomBooking.getId()
-after_452\String1.txt,"""DELETE FROM RoomBooking WHERE id = '?'""",roomBookingId
-after_453\String1.txt,"""INSERT INTO RoomLine(guestId, roomNo, booking) VALUES('?', '?', '?')""",roomLine.getGuest().getId(),roomLine.getRoom().getNumber(),roomLine.getBooking().getId()
-after_454\String1.txt,"""DELETE FROM RoomLine WHERE guestId=? AND roomNo=? AND booking=?""",guestId,roomNo,booking
-after_455\String1.txt,"""INSERT INTO RoomType(category, typeDescription, price)"" + "" VALUES('?','?','?')""",rt.getCategory(),rt.getDescription(),rt.getPrice()
-after_456\String1.txt,"""DELETE FROM RoomType WHERE category='?'""",catagory
-after_457\String1.txt,"""UPDATE RoomType SET "" + ""typeDescription='?', "" + ""price='?' WHERE category='?'""",rt.getDescription(),rt.getPrice(),rt.getCategory()
-after_458\String1.txt,"""INSERT INTO Team(teamId, leaderId, numberOfParticipants) VALUES ('?','?','?') INSERT INTO TeamParticipants(teamId, participantId)  VALUES ('?','?')""",nextTeamId,guestObj.getId(),team.getNumberOfParticipants(),nextTeamId,guestObj.getId()
-after_459\String1.txt,"""UPDATE Team SET leaderId= '?', "" + ""numberOfParticipants= '?' "" + ""WHERE teamId= '?'""",guestObj.getId(),teamObj.getNumberOfParticipants(),teamObj.getId()
-after_461\String1.txt,"""DELETE FROM Team WHERE teamId= '?'""",id
-after_462\String1.txt,"""DELETE FROM Team WHERE teamId= '?' AND leaderId= '?'""",teamId,leaderId
-after_463\String1.txt,"""INSERT INTO TeamParticipants(teamId, participantId) VALUES ('?','?')""",teamParticipant.getTeam().getId(),teamParticipant.getGuest().getId()
-after_464\String1.txt,"""DELETE FROM TeamParticipants WHERE teamId= '?'"" + "" AND participantId= '?'""",teamId,participantId
-after_465\String1.txt,"""DELETE FROM TeamParticipants WHERE teamId= '?'""",teamId
-after_466\String1.txt,"""SELECT COUNT(*) AS teamParticipantInstances FROM TeamParticipants "" + "" WHERE teamId='?' AND participantId='?'""",teamId,participantId
-after_467\String1.txt,"""INSERT INTO TravelAgency(cvr, name, zipcode, country, address, phoneNo, email) VALUES('?','?','?','?','?','?','?')""",travelAgency.getCVR(),travelAgency.getName(),travelAgency.getZipCode(),travelAgency.getCountry(),travelAgency.getAddress(),travelAgency.getPhoneNo(),travelAgency.getEmail()
-after_468\String1.txt,"""UPDATE TravelAgency SET "" + ""name='?', "" + ""zipcode='?', "" + ""country='?', "" + ""address='?', "" + ""phoneNo='?', "" + ""email='?' "" + ""WHERE cvr='?'""",travelAgencytravelAgency.getName(),travelAgencytravelAgency.getZipCode(),travelAgencytravelAgency.getCountry(),travelAgencytravelAgency.getAddress(),travelAgencytravelAgency.getPhoneNo(),travelAgencytravelAgency.getEmail(),travelAgencytravelAgency.getCVR()
-after_469\String1.txt,"""DELETE FROM TravelAgency WHERE cvr= '?'""",cvr
-after_47\String1.txt,"""INSERT INTO ingresso ( local, datahora, lugar, quantidade, idcategoria, idtipoingresso, valor) "" + ""VALUES (?,?,?,?,?,?,?)""",adulto.getLocal(),new java.sql.Date(adulto.getDataHora().getTime()),adulto.getLugar(),adulto.getQuantidade(),adulto.getCategoria().getId(),adulto.getTipoIngresso().getId(),adulto.getValor()
-after_470\String1.txt,"""UPDATE instructor SET admin = ? WHERE idinstructor = ?;""",curAdmin,selInstr.getInstrId()
-after_471\String1.txt,"""DELETE FROM TravelAgency WHERE name= '"" + name + ""'""",name
-after_472\String1.txt,"""SELECT COUNT(*) AS travelAgencyInstances FROM TravelAgency "" + "" WHERE cvr<> '?'  AND name= '?' AND zipcode= '?' AND country= '?' AND address= '?'""",cvr,name,zipcode,country,address
-after_473\String1.txt,"""INSERT INTO Agence (codeAgence, nomAgence) VALUES (?, ?)""",obj.getCodeAgence(),obj.getNomAgence()
-after_474\String1.txt,"""DELETE FROM Agence WHERE id = ?""",obj.getId()
-after_475\String1.txt,"""UPDATE Agence SET codeAgence = ?, nomAgence = ? WHERE id = ?""",obj.getCodeAgence(),obj.getNomAgence(),obj.getId()
-after_476\String1.txt,"""SELECT * FROM Agence WHERE id = ?""",id
-after_477\String1.txt,"""SELECT * FROM Agence WHERE codeAgence = ?""",code
-after_478\String1.txt,"""Select * from Members a "" + "" where a.User_Name = ? """,userName
-after_479\String1.txt,"""Select *  from Starwood a "" + "" where a.User_Name = ? """,userName
-after_480\String1.txt,"""Insert into Guest(Id,Guest_Name, Guest_Surname, Address, Email_Address, Card_Number, Phone_Number,ExpiryDate,CVV) values (?,?,?,?,?,?,?,?,?)""",GuestID.toString(),guest.getGuestName(),guest.getGuestSurename(),guest.getGuestAddress(),guest.getGuestEmail(),guest.getGuestCardNumber(),guest.getGuestPhoneNumber(),guest.getExpiryDate(),guest.getCVV()
-after_481\String1.txt,"""Insert into Reservations(GuestID, start, end, numberRooms) values (?, ?, ?, ?)""",GuestID,start,end,numberRooms
-after_482\String1.txt,"""Insert into Starwood(Member_Name, Member_Surname, Address, Email_Address, Card_Number, Phone_Number, User_Name) values (?,?,?,?,?,?,?)""",member.getName(),member.getSurename(),member.getAddress(),member.getEmail(),member.getCardNumber(),member.getPhoneNumber(),member.getUserName()
-after_484\String1.txt,"""Delete From Credit_Card where MemberID = ?""",id.toString()
-after_486\String1.txt,"""Select *  from Credit_Card a where a.MemberID = ?   """,id.toString()
-after_487\String1.txt,"""Select *  from Reserved_Rooms a where a.reservationID = ? """,reservationId.toString()
-after_488\String1.txt,"""Update Starwood set Member_Name =?  where Id=? """,member.getName(),member.getId().toString()
-after_489\String1.txt,"""Update Starwood set Member_Surname =?  where Id=? """,member.getSurename(),member.getId().toString()
-after_49\String1.txt,"""SELECT * "" + ""FROM evolutionary_distance "" + ""WHERE organism_1 like '?' OR organism_2 like '?' ORDER BY CAST(evolutionary_distance AS float)  "" + "" LIMIT ?""",organismName,organismName,top
-after_490\String1.txt,"""Update Starwood set Address =?  where Id=? """,member.getAddress(),member.getId().toString()
-after_491\String1.txt,"""Update Starwood set Email_Address =?  where Id=? """,member.getEmail(),member.getId().toString()
-after_492\String1.txt,"""Update Starwood set Phone_Number =?  where Id=? """,member.getPhoneNumber(),member.getId().toString()
-after_495\String1.txt,"""Update Members set User_Password =? where User_Name=? """,member.getPassword(),member.getUserName()
-after_496\String1.txt,"""Insert into Credit_Card(MemberID, Card_Number,ExpiryDate, CVV) values (?,?,?,?)""",card.getId().toString(),card.getCardNumber(),card.getExpiryDate(),card.getCVV()
-after_497\String1.txt,"""select * from agent_details where agn_id=? and password=? and approval=? """,user,pass,str
-after_498\String1.txt,"""Select a.Guest_Name, a.Guest_Surname, a.Address, a.Card_Number, a.Phone_Number, a.Email_Address, a.CVV, a.ExpiryDate from Guest a WHERE Id = ?""",GuestID.toString()
-after_499\String1.txt,"""Insert into Guest(Guest_Name, Guest_Surname, Address, Email_Address, Card_Number, Phone_Number,ExpiryDate,CVV) values (?,?,?,?,?,?,,)""",guest.getGuestName(),guest.getGuestSurename(),guest.getGuestAddress(),guest.getGuestEmail(),guest.getGuestCardNumber(),guest.getGuestPhoneNumber(),guest.getExpiryDate(),guest.getCVV()
-after_5\String1.txt,"""Delete from Cadre_Didactice where id_Cadru_Didactic = ?""",id_Cadru_Didactic
-after_500\String1.txt,"""Insert into Starwood(Id,Member_Name, Member_Surname, Address, Email_Address, Card_Number, Phone_Number, User_Name,CVV,ExpiryDate) values (?,?,?,?,?,?,?,?,?,?)""",adHoc.randomBigInteger().toString(),member.getName(),member.getSurename(),member.getAddress(),member.getEmail(),member.getCardNumber(),member.getPhoneNumber(),member.getUserName(),member.getCVV(),member.getExpiryDate()
-after_501\String1.txt,"""Select *  from Starwood a "" + "" where a.id = ? """,id.toString()
-after_502\String1.txt,"""Select Id  from Starwood a "" + "" where a.User_name = ? """,userName
-after_503\String1.txt,"""Insert into Members(User_Name, User_Password) values (?,?)""",member.getUserName(),member.getPassword()
-after_504\String1.txt,"""Select a.Reservation_Id, a.GuestID, a.start, a.end, a.duration, a.numberRooms, a.bookingDate, a.status, a.reservationType, a.price from Reservations a WHERE a.Reservation_Id = ? "" + ""and a.reservationType = 'Guest' """,Reservation_Id.toString()
-after_505\String1.txt,"""Select a.Reservation_Id, a.GuestID, a.start, a.end, a.numberRooms, a.bookingDate, a.status, a.reservationType, a.price from Reservations a where a.GuestID = ?""",GuestID.toString()
-after_508\String1.txt,"""Insert into Reservations(reservation_Id, GuestID, start, end, numberRooms, status, reservationType, price) values (?, ?, ?, ?, ?, ?, ?, ?))""",reservationID.toString(),GuestID.toString(),start,end,numberRooms,status,reservationType,price
-after_509\String1.txt,"""Update Reservations set status = \""Cancelled\"" where Reservation_Id=? """,reservationID.toString()
-after_510\String1.txt,"""Delete From Reserved_Rooms where reservationID= ?""",reservationID.toString()
-after_511\String1.txt,"""Insert into Reserved_Rooms(roomNumber, reservationID ) values (?, ?)""",roomNumber,reservationID.toString()
-after_512\String1.txt,"""SELECT roomNumber, reservationID FROM Reserved_Rooms WHERE reservationID = ?""",reservationID.toString()
-after_513\String1.txt,"""SELECT r.Room_Number, r.capacity, r.price FROM sse.Room AS r WHERE r.Room_Number NOT IN(SELECT b.roomNumber FROM sse.Reserved_Rooms AS b JOIN sse.Reservations AS a ON a.Reservation_Id=b.reservationID WHERE a.start >= ? AND a.end <= ? AND a.status='Active')""",startDate,endDate
-after_514\String1.txt,"""SELECT Room_Number, price FROM Room WHERE Room_Number = ?""",roomNumber
-after_516\String1.txt,"""INSERT INTO CADASTROAGRICULTOR VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",agricultor.getId_agricultor(),agricultor.getNome(),new java.sql.Date(agricultor.getData_cadastro().getTime()),agricultor.getMunicipio(),agricultor.getLocalidade(),agricultor.getProdutos(),agricultor.getStatus(),agricultor.getTelefone()
-after_517\String1.txt,"""UPDATE CADASTROAGRICULTOR SET NOME=?, DATA_CADASTRO=?, MUNICIPIO=?, LOCALIDADE=?, PRODUTOS=?, STATUS=?, TELEFONE=? WHERE ID_AGRICULTOR=?""",agricultor.getNome(),new java.sql.Date(agricultor.getData_cadastro().getTime()),agricultor.getMunicipio(),agricultor.getLocalidade(),agricultor.getProdutos(),agricultor.getStatus(),agricultor.getTelefone()
-after_518\String1.txt,"""DELETE FROM CADASTROAGRICULTOR WHERE ID_AGRICULTOR = ?""",agricultor.getId_agricultor()
-after_519\String1.txt,"""delete from customers where customerNo=?""",delInt
-after_52\String1.txt,"""select * from ? where ?=?"" + "" order by ?""",TBL_NAME,FIELD_ID_PIANO,search_id,FIELD_NOME
-after_520\String1.txt,"""SELECT * FROM instructor WHERE idinstructor != ? ORDER BY lname""",instrId
-after_521\String1.txt,"""delete from fuel_types where id=?""",delInt
-after_523\String1.txt,"""DELETE FROM Person WHERE name = ?""",person.getName()
-after_525\String1.txt,"""delete from project_hrm where id='?'""",id
-after_527\String1.txt,"""delete from user where id = ?""",userid
-after_528\String1.txt,"""update atm_user set state = 2 where account = '?';""",del_Account
-after_530\String1.txt,"""Insert into customer_login (customer_username, customer_password, customer_age, customer_since_from, customer_purchase_id, customer_address, customer_pincode)"" + ""values (?,?,?,?,?,?,?)""",register.getUsername(),register.getPassword(),register.getAge(),register.getSinceFrom(),register.getPurchaseId(),register.getAddress(),register.getPincode()
-after_531\String1.txt,"""INSERT INTO CUSTOMER(NAME,MOBILE_NUMBER) VALUES(?,?)""",customerAddRequest.getMobileNumber(),customerAddRequest.getName()
-after_532\String1.txt,"""SELECT * FROM CUSTOMER WHERE CUSTOMER_ID=?""",customerFetchParams.getCustomerId()
-after_533\String1.txt,"""SELECT FIRST_NAME,LAST_NAME FROM CUSTOMER WHERE EMAIL = ?""",Login.sendUsername()
-after_534\String1.txt,"""SELECT PHONE FROM CUSTOMER WHERE EMAIL = ?""",Login.sendUsername()
-after_535\String1.txt,"""SELECT ADDRESS FROM CUSTOMER WHERE EMAIL = ?""",Login.sendUsername()
-after_537\String1.txt,"""INSERT INTO Usuarios"" + ""(nome,Login,senha,email) values(?,?,?,?)""",pessoa.getNome(),pessoa.getLogin(),pessoa.getSenha(),pessoa.getEmail()
-after_538\String1.txt,"""UPDATE Usuarios SET "" + ""nome=?,login=?, senha=?, email=? WHERE id=?""",pessoa.getNome(),pessoa.getLogin(),pessoa.getSenha(),pessoa.getEmail(),pessoa.getId()
-after_539\String1.txt,"""DELETE FROM Usuarios WHERE id=?""",id
-after_54\String1.txt,"""select * from ? where ?=?""",TBL_NAME,FIELD_ID,search_id
-after_540\String1.txt,"""SELECT * FROM usuarios where Login=? and senha=?""",pessoa.getLogin(),pessoa.getSenha()
-after_541\String1.txt,"""SELECT * FROM cotizaciones WHERE idrequisicion=?""",idrequisicion
-after_542\String1.txt,"""SELECT usuario, contrasena FROM Administradores WHERE usuario = ?;""",user
-after_543\String1.txt,"""SELECT cedula_ge, contrasena FROM Gerentes WHERE cedula_ge =?;""",user
-after_544\String1.txt,"""SELECT * FROM Notas where usuario_abriu=?""",idl
-after_545\String1.txt,"""INSERT INTO Notas"" + ""(aberta,usuario_abriu,titulo,texto,cor,prazo_final_nota,data_criacao) values(?,?,?,?,?,?,?)""",nota.getAberta(),nota.getUsuario_abriu(),nota.getTitulo(),nota.getTexto(),nota.getCor(),new Date(nota.getPrazo_final().getTimeInMillis()),new Date(nota.getData_criacao().getTimeInMillis())
-after_546\String1.txt,"""UPDATE Notas SET "" + ""aberta=?,titulo=?, texto=?, cor=?,prazo_final_nota=? WHERE id=?""",nota.getAberta(),nota.getTitulo(),nota.getTexto(),nota.getCor(),new Date(nota.getPrazo_final().getTimeInMillis()),nota.getId()
-after_547\String1.txt,"""DELETE FROM Notas WHERE id=?""",id
-after_548\String1.txt,"""SELECT cedula_op, contrasena FROM Operadores WHERE cedula_op = ?;""",user
-after_549\String1.txt,"""select aoc from VARIETE where libelle=?;""",libelle
-after_55\String1.txt,"""select * from ? where ?=?""",TBL_NAME,FIELD_NOME,search_nome
-after_550\String1.txt,"""INSERT INTO VARIETE VALUES (?,?) ;""",variete.getLibelle(),aoc
-after_551\String1.txt,"""UPDATE VARIETE SET aoc = ?  where libelle = ?;""",aoc,variete.getLibelle()
-after_552\String1.txt,"""DELETE FROM VARIETE where libelle=?;""",libelle
-after_555\String1.txt,"""INSERT INTO COUNTRY VALUES (?, ?, ?)""",country.getCountry_id(),country.getCountry(),new java.sql.Timestamp(new Date().getTime())
-after_557\String1.txt,"""insert into practica7.PRESTEC values (DEFAULT, ?,?,?, now(), NULL)""",ID_Bibliotecari,ID_Soci,ID_Copia
-after_56\String1.txt,"""insert into ? (?,?) values(?,?)""",TBL_NAME,FIELD_NOME,FIELD_ID_PIANO,mappa.getNome(),mappa.getID_piano()
-after_560\String1.txt,"""UPDATE COUNTRY SET COUNTRY=?, LAST_UPDATE=? WHERE COUNTRY_ID=?""",country.getCountry(),new java.sql.Timestamp(new Date().getTime()),country.getCountry_id()
-after_561\String1.txt,"""Insert into orar values(?,?,?,?,?,?,?,?,?)""",orar.getZiua(),orar.getOra_inceput(),orar.getOra_sfarsit(),orar.getFrecventa(),orar.getId_Disciplina(),orar.getTip(),orar.getId_Cadru_Didactic(),orar.getId_Sala(),orar.getId_Formatie()
-after_563\String1.txt,"""INSERT INTO "" + ((res instanceof Sala) ? "" TaskLogisticRoom "" : ""TaskLogisticEquipment"") + "" VALUES (?,?)""",t.getId(),res.getId()
-after_564\String1.txt,"""INSERT INTO TaskBudget VALUES (?,?,?,?)""",t.getId(),tip,res.getSuma(),res.getDescriere()
-after_565\String1.txt,"""INSERT INTO TaskTeam VALUES (?,?)""",t.getId(),cd.getId()
-after_567\String1.txt,"""SELECT PHONE FROM CUSTOMER WHERE EMAIL = ?""",Login.sendUsername()
-after_568\String1.txt,"""INSERT INTO CercuriStudentesti VALUES(?,?,?,?,?,?)""",cerc.getId(),0,cerc.getDenumire(),cerc.getMentor(),cerc.getAn(),cerc.getDescriere()
-after_569\String1.txt,"""SELECT * FROM ProgrameDeStudiu WHERE sectie_id = ?""",sectie.getId()
-after_57\String1.txt,"""update ? set ?=? "" + ""where ?=?""",TBL_NAME,FIELD_NOME,mappa.getNome(),FIELD_ID,id_mappa
-after_570\String1.txt,"""SELECT * FROM PlanuriInvatamint WHERE program_id = ?""",plan.getId()
-after_571\String1.txt,"""INSERT INTO Sectii VALUES (?,?)""",sectie.getNrSemestre(),sectie.getDenumire()
-after_572\String1.txt,"""INSERT INTO ProgrameDeStudiu VALUES (?,?,?)""",sectie.getId(),plan.getDenumire(),plan.getSemestru()
-after_573\String1.txt,"""INSERT INTO PlanuriInvatamint VALUES(?,?,?,?,?,?,?,?)""",plan.getId(),disc.getDisc(),disc.getOreCurs(),disc.getOreSem(),disc.getOreLab(),disc.getOrePr(),disc.getFinalizare(),disc.getNrCredite()
-after_574\String1.txt,"""DELETE FROM Sectii WHERE Id_Sectie = ?""",sectie.getId()
-after_576\String1.txt,"""SELECT ADDRESS FROM CUSTOMER WHERE EMAIL = ?""",Login.sendUsername()
-after_577\String1.txt,"""INSERT INTO Album VALUES(?, null);""",album.getIdSpotify()
-after_578\String1.txt,"""SELECT * FROM Album WHERE id_album=?;""",id
-after_579\String1.txt,"""SELECT * FROM Album WHERE id_spotify=?;""",idSpotify
-after_58\String1.txt,"""delete from ? where ?=?""",TBL_NAME,FIELD_ID,id_mappa
-after_580\String1.txt,"""Select UserId, `Name`, a.Id as aId, i.Id, `Hash`, `Image`, `Album`, `CreatedIn` From `ALBUM` as a "" + ""INNER JOIN `IMAGE` as i on i.Album = a.Id"" + "" Where `UserId` = ? Group by `Name`, i.`Id`, `Album`""",userId
-after_582\String1.txt,"""INSERT INTO Album_Lista VALUES(null, ?, ?);""",albumLista.getAlbum().getIdAlbum(),albumLista.getLista().getIdLista()
-after_583\String1.txt,"""DELETE FROM Album_Lista WHERE id_album_lista=?;""",id
-after_584\String1.txt,"""SELECT * FROM Album_Lista "" + ""INNER JOIN Lista ON Album_Lista.id_lista = Lista.id_lista "" + ""INNER JOIN Usuario ON Lista.id_usuario = Usuario.id_usuario "" + ""INNER JOIN Album ON Album.id_album = Album_Lista.id_album "" + ""WHERE Album_Lista.id_lista=?;""",id
-after_585\String1.txt,"""SELECT sensor_type, comparator, comparison_value FROM alerts WHERE node_id = ? AND sensor_type = ?;""",node,sensorType
-after_586\String1.txt,"""INSERT INTO alerts (sensor_type, comparator, comparison_value, node_id) VALUES (?, ?, ?, ?);""",sensorType,comparator,compValue,node
-after_587\String1.txt,"""DELETE FROM alerts WHERE id = ?;""",id
-after_588\String1.txt,"""INSERT INTO ingresso ( local, datahora, lugar, quantidade, idcategoria, idtipoingresso, valor) "" + ""VALUES (?,?,?,?,?,?,?)""",doisD.getLocal(),doisD.getLugar(),doisD.getQuantidade(),doisD.getCategoria().getId(),doisD.getTipoIngresso().getId(),doisD.getValor()
-after_589\String1.txt,"""DELETE FROM ingresso WHERE id=?""",id
-after_59\String1.txt,"""SELECT map FROM maps WHERE map = '?'""",name
-after_590\String1.txt,"""UPDATE ingresso SET local=?, datahora=?, lugar=?, quantidade=?, idcategoria=?, idtipoingresso=?, valor=? WHERE id=?""",doisD.getLocal(),doisD.getLugar(),doisD.getQuantidade(),doisD.getCategoria().getId(),doisD.getTipoIngresso().getId(),doisD.getValor(),doisD.getId()
-after_591\String1.txt,"""SELECT * FROM ingresso WHERE id=?""",codigo
-after_592\String1.txt,"""INSERT INTO T_HT_ALIMENTACAO (CD_ALIMENTO, DS_ALIMENTO, CD_USUARIO, VL_CALORIAS_GANHAS, DT_REGISTRO) VALUES (SQ_T_HT_ALIMENTACAO.NEXTVAL, ?, ?, ?, ?)""",alimentacao.getDs_alimento(),alimentacao.getCd_usuario(),alimentacao.getVl_calorias_ganhas()
-after_593\String1.txt,"""UPDATE T_HT_ALIMENTACAO SET CD_ALIMENTO = ?, DS_ALIMENTO = ?, CD_USUARIO = ?, VL_CALORIAS_GANHAS = ?, DT_REGISTRO = ? WHERE CD_ALIMENTO = ?""",alimentacao.getCd_alimento(),alimentacao.getDs_alimento(),alimentacao.getCd_usuario(),alimentacao.getVl_calorias_ganhas(),alimentacao.getCd_alimento()
-after_594\String1.txt,"""DELETE FROM T_HT_ALIMENTACAO WHERE CD_ALIMENTO = ?""",cd_alimento
-after_595\String1.txt,"""SELECT * FROM T_HT_ALIMENTACAO WHERE CD_ALIMENTO = ?""",codigoBusca
-after_596\String1.txt,"""SELECT * FROM allergies WHERE PatientID=? ORDER BY FirstFound DESC""",pid
-after_598\String1.txt,"""SELECT * FROM druginteractions WHERE FirstDrug = ? OR SecondDrug = ?""",drugCode,drugCode
-after_599\String1.txt,"""INSERT INTO druginteractions (FirstDrug, SecondDrug, Description) "" + ""VALUES (?,?,?)""",firstDrug,secondDrug,description
-after_6\String1.txt,"""UPDATE Cadre_Didactice  SET "" + ""pozitia = ?, "" + ""den_post = ?, "" + ""nume = ?, "" + ""functia= ?, "" + ""tit_vac = ? "" + ""WHERE Id_Cadru_Didactic= ?""",cd.getPozitia(),cd.getDenumirePost(),cd.getNume(),cd.getFunctia(),cd.getTitVac(),cd.getId()
-after_60\String1.txt,"""INSERT INTO maps VALUES ('?')""",name
-after_600\String1.txt,"""DELETE FROM druginteractions WHERE (FirstDrug = ? OR SecondDrug = ?) AND (FirstDrug = ? OR SecondDrug = ?)""",firstDrug,firstDrug,secondDrug,secondDrug
-after_601\String1.txt,"""SELECT * FROM drugreactionoverridecodes WHERE Code = ?""",code
-after_602\String1.txt,"""INSERT INTO drugreactionoverridecodes (Code, Description) "" + ""VALUES (?,?)""",orc.getORCode(),orc.getDescription()
-after_603\String1.txt,"""UPDATE drugreactionoverridecodes SET Description = ? "" + ""WHERE Code = ?""",orc.getDescription(),orc.getORCode()
-after_604\String1.txt,"""INSERT INTO localdb.sys_network.repositories (repo_url) "" + ""VALUES (?)""",repoUrl
-after_605\String1.txt,"""DELETE FROM localdb.sys_network.repositories WHERE "" + ""repo_url = ?""",repoUrl
-after_606\String1.txt,"""SELECT name FROM localdb.sys_root.dba_jars WHERE "" + ""name = ? AND url IN (?,?)""",name,fn,"""file:"" + fn"
-after_608\String1.txt,"""INSERT INTO Usuarios"" + ""(nome,Login,senha,email) values(?,?,?,?)""",pessoa.getNome(),pessoa.getLogin(),pessoa.getSenha(),pessoa.getEmail()
-after_609\String1.txt,"""INSERT INTO EDITORA VALUES (?, ?, ?)""",editora.getEditora_id(),editora.getNome(),editora.getMunicipio()
-after_610\String1.txt,"""UPDATE EDITORA SET NOME=?, MUNICIPIO=? WHERE EDITORA_ID=?""",editora.getMunicipio(),editora.getNome(),editora.getEditora_id()
-after_611\String1.txt,"""DELETE FROM EDITORA WHERE EDITORA_ID = ?""",editora.getEditora_id()
-after_612\String1.txt,"""UPDATE Usuarios SET "" + ""nome=?,login=?, senha=?, email=? WHERE id=?""",pessoa.getNome(),pessoa.getLogin(),pessoa.getSenha(),pessoa.getEmail(),pessoa.getId()
-after_613\String1.txt,"""INSERT INTO autot VALUES(?,?,?,?)""",rekno,merkki,malli,vuosi
-after_616\String1.txt,"""DELETE FROM Usuarios WHERE id=?""",id
-after_617\String1.txt,"""INSERT INTO tbl_emp(empno, ename, job, hiredate, sal) VALUES(?, ?, ?, ? ,?)""",emp.getEmpno(),emp.getEname(),emp.getJob(),emp.getSal()
-after_618\String1.txt,"""DELETE FROM tbl_emp WHERE empno = ?""",emp.getEmpno()
-after_619\String1.txt,"""SELECT * FROM usuarios where Login=? and senha=?""",pessoa.getLogin(),pessoa.getSenha()
-after_62\String1.txt,"""DELETE FROM marca WHERE Id = ?""",_iId
-after_620\String1.txt,"""UPDATE tbl_emp SET job = ? WHERE empno = ?""",emp.getJob(),emp.getEmpno()
-after_621\String1.txt,"""delete from Employee where EMPID = ? """,empId
-after_622\String1.txt,"""select * from Employee where EMPID = ?""",empId
-after_623\String1.txt,"""SELECT * FROM cotizaciones WHERE idrequisicion=?""",idrequisicion
-after_624\String1.txt,"""SELECT usuario, contrasena FROM Administradores WHERE usuario = ?;""",user
-after_625\String1.txt,"""INSERT INTO EMPRESTIMO VALUES (?, ?, ?, ?, ?, ?, ?)""",emprestimo.getEmprestimo_id(),emprestimo.getLivro().getLivro_id(),emprestimo.getEstudante().getEstudante_id(),emprestimo.getStatus()
-after_626\String1.txt,"""UPDATE EMPRESTIMO SET LIVRO_ID=?, ESTUDANTE_ID=?, DATA_RETIRADA=?, DATA_DEVOLUCAO=?, DATA_ENTREGA=?, STATUS=? WHERE EMPRESTIMO_ID=?""",emprestimo.getStatus(),emprestimo.getEstudante().getEstudante_id(),emprestimo.getLivro().getLivro_id(),emprestimo.getEmprestimo_id()
-after_627\String1.txt,"""DELETE FROM EMPRESTIMO WHERE EMPRESTIMO_ID = ?""",emprestimo.getEmprestimo_id()
-after_629\String1.txt,"""Select * from tickets Where TicketNo =?;""",ticketx.getText()
-after_63\String1.txt,"""UPDATE marca "" + ""SET Nombre = ?, Id_Imagen = ? WHERE Id = ?""","Data.String2Sql(_sNombre, true, false)",_iId_Imagen,_iId
-after_630\String1.txt,"""select * from ? where 1<>1""",tableName
-after_631\String1.txt,"""select column_name,data_type,column_comment from information_schema.columns where table_schema='?' and table_name='?'""",bi.getDatabase(),bi.getTable()
-after_632\String1.txt,"""INSERT INTO ESTUDANTE VALUES (?, ?, ?, ?, ?)""",estudante.getEstudante_id(),estudante.getNome(),estudante.getCurso(),estudante.getStatus()
-after_633\String1.txt,"""UPDATE ESTUDANTE SET NOME=?, CURSO=?, DATA_MATRICULA=?, STATUS=? WHERE ESTUDANTE_ID=?""",estudante.getStatus(),estudante.getCurso(),estudante.getNome(),estudante.getEstudante_id()
-after_634\String1.txt,"""DELETE FROM ESTUDANTE WHERE ESTUDANTE_ID = ?""",estudante.getEstudante_id()
-after_635\String1.txt,"""SELECT cedula_ge, contrasena FROM Gerentes WHERE cedula_ge =?;""",user
-after_636\String1.txt,"""SELECT * FROM Notas where usuario_abriu=?""",idl
-after_637\String1.txt,"""INSERT INTO Notas"" + ""(aberta,usuario_abriu,titulo,texto,cor,prazo_final_nota,data_criacao) values(?,?,?,?,?,?,?)""",nota.getAberta(),nota.getUsuario_abriu(),nota.getTitulo(),nota.getTexto(),nota.getCor()
-after_638\String1.txt,"""UPDATE adv_pendencia.tab_pedencia set nomependencia = ?, descPend = ?, statusPend = ?, datEmiPend = ?, datPrevFechamento =? where idPed = ?""",cpm.getNomePendencia(),cpm.getDescPendencia(),cpm.getStatusPendencia(),cpm.getIdPed()
-after_639\String1.txt,"""UPDATE Notas SET "" + ""aberta=?,titulo=?, texto=?, cor=?,prazo_final_nota=? WHERE id=?""",nota.getAberta(),nota.getTitulo(),nota.getTexto(),nota.getCor(),nota.getId()
-after_64\String1.txt,"""SELECT Id FROM marca ?""","Where(sNombre, iId_Imagen)"
-after_640\String1.txt,"""update adv_pendencia.tab_extensao set descExtensao = ?, obExtensao = ? where tab_pasta_idPasta = ? and fk_idPendencia = ?""",cpm.getDescExtensao(),cpm.getObsExtensao(),cpm.getIdPasta(),cpm.getIdPed()
-after_641\String1.txt,"""DELETE FROM adv_pendencia.tab_extensao WHERE tab_pasta_idPasta = ? AND fk_idPendencia = ?""",cpm.getIdPasta(),cpm.getIdPed()
-after_642\String1.txt,"""DELETE FROM adv_pendencia.tab_pedencia WHERE idPed = ?""",cpm.getIdPed()
-after_643\String1.txt,"""delete from ? where id=?""",tableName,id
-after_644\String1.txt,"""DELETE FROM Notas WHERE id=?""",id
-after_645\String1.txt,"""SELECT idPed FROM adv_pendencia.tab_pedencia where tab_pasta_idPasta = ?""",filtro.getPasta()
-after_647\String1.txt,"""SELECT cedula_op, contrasena FROM Operadores WHERE cedula_op = ?;""",user
-after_648\String1.txt,"""INSERT INTO FamClient (codeFamClient, nomFamClient) VALUES (?, ?)""",obj.getCodeFamClient(),obj.getNomFamClient()
-after_649\String1.txt,"""DELETE FROM FamClient WHERE id = ?""",obj.getId()
-after_650\String1.txt,"""UPDATE FamClient SET codeFamClient = ?, nomFamClient = ? WHERE id = ?""",obj.getCodeFamClient(),obj.getNomFamClient(),obj.getId()
-after_651\String1.txt,"""SELECT * FROM FamClient WHERE id = ?""",id
-after_652\String1.txt,"""SELECT * FROM FamClient WHERE codeFamClient = ?""",code
-after_653\String1.txt,"""select aoc from VARIETE where libelle=?;""",libelle
-after_654\String1.txt,"""INSERT INTO VARIETE VALUES (?,?) ;""",variete.getLibelle(),aoc
-after_655\String1.txt,"""UPDATE VARIETE SET aoc = ?  where libelle = ?;""",aoc,variete.getLibelle()
-after_656\String1.txt,"""DELETE FROM VARIETE where libelle=?;""",libelle
-after_659\String1.txt,"""INSERT INTO COUNTRY VALUES (?, ?, ?)""",country.getCountry_id(),country.getCountry()
-after_66\String1.txt,"""INSERT INTO ingresso ( local, datahora, lugar, quantidade, idcategoria, idtipoingresso, valor) "" + ""VALUES (?,?,?,?,?,?,?)""",meia.getLocal(),new java.sql.Date(meia.getDataHora().getTime()),meia.getLugar(),meia.getQuantidade(),meia.getCategoria().getId(),meia.getTipoIngresso().getId(),meia.getValor()
-after_661\String1.txt,"""insert into practica7.PRESTEC values (DEFAULT, ?,?,?, now(), NULL)""",ID_Bibliotecari,ID_Soci,ID_Copia
-after_664\String1.txt,"""UPDATE COUNTRY SET COUNTRY=?, LAST_UPDATE=? WHERE COUNTRY_ID=?""",country.getCountry(),country.getCountry_id()
-after_665\String1.txt,"""Insert into orar values(?,?,?,?,?,?,?,?,?)""",orar.getZiua(),orar.getOra_inceput(),orar.getOra_sfarsit(),orar.getFrecventa(),orar.getId_Disciplina(),orar.getTip(),orar.getId_Cadru_Didactic(),orar.getId_Sala(),orar.getId_Formatie()
-after_667\String1.txt,"""select * from users where name=?""",data
-after_668\String1.txt,"""update users set hitcount=hitcount+1 where name=?""",names
-after_67\String1.txt,"""DELETE FROM ingresso WHERE id=?""",id
-after_68\String1.txt,"""UPDATE ingresso SET local=?, datahora=?, lugar=?, quantidade=?, idcategoria=?, idtipoingresso=?, valor=? WHERE id=?""",meia.getLocal(),new java.sql.Date(meia.getDataHora().getTime()),meia.getLugar(),meia.getQuantidade(),meia.getCategoria().getId(),meia.getTipoIngresso().getId(),meia.getValor(),meia.getId()
-after_69\String1.txt,"""SELECT * FROM ingresso WHERE id=?""",codigo
-after_7\String1.txt,"""Select * from User where email=? and userName=? """,forgotObj.getUserName(),forgotObj.getEmail()
-after_70\String1.txt,"""SELECT * FROM ingresso WHERE id=?""",codigo
-after_71\String1.txt,"""SELECT * FROM member WHERE id = ?""",strId
-after_73\String1.txt,"""SELECT * FROM member WHERE id = ?""",strId
-after_74\String1.txt,"""INSERT INTO member (id, pwd, name, phone, email, address, e_key) VALUES (?, ?, ?, ?, ?, ?, ?)""",m.getId(),m.getPwd(),m.getName(),m.getPhone(),m.getEmail(),m.getAddress(),m.getKey()
-after_75\String1.txt,"""SELECT * FROM member WHERE id = ?""",strId
-after_76\String1.txt,"""SELECT id FROM member WHERE email=?""",email
-after_77\String1.txt,"""UPDATE member SET e_key=? WHERE id=?""",key,id
-after_78\String1.txt,"""SELECT id FROM member WHERE e_key=?""",key
-after_79\String1.txt,"""SELECT pwd FROM member WHERE e_key=?""",key
-after_8\String1.txt,"""UPDATE User SET password=? where userName=? and email=?""",forgotObj.getPassword(),forgotObj.getUserName(),forgotObj.getEmail()
-after_80\String1.txt,"""UPDATE member SET pwd=?, name=?, phone=?, email=?, address=? WHERE id = ?""",m.getPwd(),m.getName(),m.getPhone(),m.getEmail(),m.getAddress(),m.getId()
-after_81\String1.txt,"""UPDATE member "" + ""SET pwd='x', name='x', phone='010-0000-0000', address='x', "" + ""memo='x', rating=3, e_key='0' "" + ""WHERE id = ?""",strId
-after_82\String1.txt,"""INSERT INTO cart VALUES (?, ?, ?, ?, ?, ?)""",id,b.getNo(),b.getTitle(),b.getPrice(),count,b.getImage()
-after_83\String1.txt,"""SELECT * "" + ""FROM cart c, book b "" + ""WHERE c.no = b.no AND id = ?""",id
-after_84\String1.txt,"""DELETE FROM cart WHERE id=? AND no=?""",id,no
-after_85\String1.txt,"""select * from ? where key='?'""",getParam().getTableName(),key
-after_86\String1.txt,"""UPDATE cart SET count=? WHERE id=? AND no=?""",count,id,no
-after_87\String1.txt,"""SELECT * FROM cart WHERE id=? AND no=?""",id,no
-after_88\String1.txt,"""UPDATE cart SET count=? WHERE id=? AND no=?""",count,id,no
-after_89\String1.txt,"""INSERT INTO wishlist VALUES (?, ?)""",id,no
-after_90\String1.txt,"""SELECT * FROM wishlist WHERE id=? AND no=?""",id,no
-after_95\String1.txt,"""SELECT * FROM shipping WHERE order_num = ?""",order_num
-after_98\String1.txt,"""UPDATE bespeak SET order_state=? WHERE order_num=?""",state,num
-after_99\String1.txt,"""INSERT INTO shipping VALUES (?, ?)""",order,ship
+before_10/String1.txt,"""Select * from User where userName="" + login.getUserName() + "" and password="" + login.getPassword()"
+before_100/String1.txt,"""SELECT COUNT(DISTINCT order_num) FROM bespeak WHERE order_state IN(7, 8, 9)"""
+before_102/String1.txt,"""DELETE FROM ingresso WHERE id="" + id"
+before_103/String1.txt,"""SELECT * "" + ""FROM (SELECT id, pwd, name, phone, email, address, memo, rating, rownum as num FROM member) "" + ""WHERE num >= "" + start + "" AND num <= "" + end"
+before_104/String1.txt,"""UPDATE member SET memo="" + memo + "", rating="" + rating + "" WHERE id="" + id"
+before_106/String1.txt,"""DELETE FROM member WHERE id="" + strId"
+before_107/String1.txt,"""DELETE FROM bespeak WHERE order_num="" + order_num"
+before_109/String1.txt,"""SELECT title FROM book WHERE no = "" + b.getNo()"
+before_11/String1.txt,"""INSERT INTO Resurse_Financiare  VALUES("" + rf.getDescriere() + "","" + rf.getSuma() + "","" + tip + "")"""
+before_110/String1.txt,"""INSERT INTO member (account,passwd,realname) VALUES ("" + account + "","" + passwd + "","" + realName + "")"""
+before_111/String1.txt,"""SELECT * FROM member WHERE account="" + account + "" AND passwd="" + passwd"
+before_112/String1.txt,"""UPDATE ingresso SET local="" + adulto.getLocal() + "", datahora="" + new java.sql.Date(adulto.getDataHora().getTime()) + "", lugar="" + adulto.getLugar() + "", quantidade="" + adulto.getQuantidade() + "", idcategoria="" + adulto.getCategoria().getId() + "", idtipoingresso="" + adulto.getTipoIngresso().getId() + "", valor="" + adulto.getValor() + "" WHERE id="" + adulto.getId()"
+before_113/String1.txt,"""insert into mensagem(de, para, mensagem) values("" + msg.getDeEmail() + "","" + msg.getParaEmail() + "","" + msg.getMensagem() + "")"""
+before_114/String1.txt,"""select * from mensagem where para = '"" + userParaEmail + ""'"""
+before_115/String1.txt,"""delete from mensagem where id = '"" + id + ""'"""
+before_117/String1.txt,"""SELECT * FROM ingresso WHERE id="" + codigo"
+before_118/String1.txt,"""SELECT * FROM message WHERE to_id = "" + mid + "" ORDER BY sent_date DESC"""
+before_119/String1.txt,"""SELECT * FROM message WHERE to_id = "" + mid + "" ORDER BY sent_date ASC"""
+before_12/String1.txt,"""Insert into User(id,firstName,lastName,userName,email,password,mobileNo) values("" + userInfo.getId() + "","" + userInfo.getFirstName() + "","" + userInfo.getLastName() + "","" + userInfo.getUserName() + "","" + userInfo.getEmail() + "","" + userInfo.getPassword() + "","" + userInfo.getMobileNo() + "")"""
+before_122/String1.txt,"""SELECT * FROM message WHERE from_id = "" + mid + "" ORDER BY sent_date DESC"""
+before_123/String1.txt,"""SELECT * FROM message WHERE from_id = "" + mid + "" ORDER BY sent_date ASC"""
+before_126/String1.txt,"""UPDATE message SET been_read=1 WHERE message_id="" + mBean.getMessageId()"
+before_127/String1.txt,"""UPDATE message SET been_read=1 WHERE message_id="" + mBean.getMessageId()"
+before_128/String1.txt,"""SELECT * FROM message WHERE original_msg_id="" + refID"
+before_129/String1.txt,sql.toString()
+before_13/String1.txt,"""Select * from User where userName= "" + userName"
+before_130/String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_DATA + "","" + FIELD_TIPO + "","" + FIELD_TBL + "") values("" + new Timestamp(System.currentTimeMillis()) + "","" + modifica.getTipo() + "","" + modifica.getTabella() + "")"""
+before_131/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_DATA + "" >= "" + data"
+before_132/String1.txt,"""INSERT INTO ModRgl (codeModRgl, nomModRgl) VALUES ("" + obj.getCodeModRgl() + "", "" + obj.getNomModRgl() + "")"""
+before_133/String1.txt,"""DELETE FROM ModRgl WHERE id = "" + obj.getId()"
+before_134/String1.txt,"""UPDATE ModRgl SET codeModRgl = "" + obj.getCodeModRgl() + "", nomModRgl = "" + obj.getNomModRgl() + "" WHERE id = "" + obj.getId()"
+before_135/String1.txt,"""SELECT * FROM ModRgl WHERE id = "" + id"
+before_136/String1.txt,"""SELECT * FROM ModRgl WHERE codeModRgl = "" + code"
+before_137/String1.txt,"""SELECT * FROM service_order "" + ""WHERE memberid = "" + id + "" AND expiration_date IS null "" + ""ORDER BY need_by_date DESC"""
+before_138/String1.txt,"""SELECT * FROM service_order "" + ""WHERE expiration_date IS null AND id = "" + id"
+before_139/String1.txt,"""SELECT * FROM services "" + ""WHERE expiration_date IS null"""
+before_14/String1.txt,"""delete from Resurse_Financiare where id="" + id"
+before_140/String1.txt,"""SELECT * FROM company "" + ""WHERE expiration_date IS null"""
+before_141/String1.txt,"""INSERT INTO service_order "" + ""(memberid, service_group, service_type_mow, service_type_edge, service_type_rake, "" + ""instruction, need_by_date, create_user_name, create_date, change_user_name, change_date)"" + ""VALUES ("" + serviceOrder.getId() + "","" + serviceOrder.getServiceGroup() + "","" + serviceOrder.getServiceTypeMow() + "","" + serviceOrder.getServiceTypeEdge() + "","" + serviceOrder.getServiceTypeRake() + "","" + serviceOrder.getInstruction() + "","" + new java.sql.Date(serviceOrder.getNeedByDate().getTime()) + "",javauser,"" + GenericUtilities.getCurrentTimeStamp() + "",javauser,"" + GenericUtilities.getCurrentTimeStamp() + "")"""
+before_142/String1.txt,"""UPDATE service_order "" + ""SET expiration_date = "" + new java.sql.Date(new java.util.Date().getTime()) + "", change_user_name = javauser, change_date = "" + GenericUtilities.getCurrentTimeStamp() + ""WHERE id = "" + serviceId"
+before_143/String1.txt,"""UPDATE service_order "" + ""SET need_by_date = "" + new java.sql.Date(serviceOrder.getNeedByDate().getTime()) + "", service_type_mow = "" + serviceOrder.getServiceTypeMow() + "", service_type_edge = "" + serviceOrder.getServiceTypeEdge() + "", "" + ""service_type_rake = "" + serviceOrder.getServiceTypeRake() + "", instruction = "" + serviceOrder.getInstruction() + "", change_user_name = javauser, change_date = "" + GenericUtilities.getCurrentTimeStamp() + "" "" + ""WHERE id = "" + serviceOrder.getId()"
+before_144/String1.txt,"""UPDATE users "" + ""SET password = "" + passwordBean.getPassword1() + "", change_user_name = javauser, change_date = "" + GenericUtilities.getCurrentTimeStamp() + ""WHERE id = "" + userId"
+before_145/String1.txt,"""SELECT server_name, server_url, node, dt_last_check, dt_last_rfaction "" + "", env from ORKIDS_SERVERS where active = 'T'"""
+before_146/String1.txt,"""SELECT NOTIFICATION_NAME, NOTIFICATION_EMAIL from ORKIDS_EMAIL_NOTIFICATION WHERE NOTIFICATION_TYPE = 'T'"""
+before_147/String1.txt,"""select * from ORKIDS_VAR_CONFIG_VALUES where id_project = 1"""
+before_148/String1.txt,"""select * from ORKIDS_VAR_CONFIG_VALUES where id_project = 1"""
+before_15/String1.txt,"""SELECT COURSEID ,COURSENAME,UUIDS,ROOMID,COURSERDATE FROM course WHERE TEACHER="" + teachername + "" AND (ROOMID IS NOT NULL AND ROOMID<>'') """
+before_153/String1.txt,"""select * from movie_feature where movie_id = "" + movie_id"
+before_154/String1.txt,"""INSERT INTO `movie_feature`(`movie_id`, `pic`) VALUES ("" + movie_id + "","" + pic + "")"""
+before_155/String1.txt,"""SELECT * FROM `movie_feature` WHERE datepost < CURRENT_TIMESTAMP order by datepost desc LIMIT 0,"" + NoPage"
+before_156/String1.txt,"""DELETE FROM `movie_feature` where movie_id = "" + movie_id"
+before_158/String1.txt,"""SELECT mp.* FROM `movie_pic` mp JOIN movie m on m.movie_id = mp.movie_id WHERE m.movie_id = "" + id"
+before_159/String1.txt,"""insert into inception_music "" + ""( musicName, musicStyle,"" + "" musicLanguage, artistName, albumName, "" + ""musicUrl, imageUrl, lyrics, "" + ""publishDate, description, "" + ""uploadedBy, uploadDate, fileLength, musicLength) "" + ""values ("" + m.getMusicName() + "" , "" + m.getMusicStyle() + "" , "" + m.getMusicLanguage() + "" , "" + m.getArtistName() + "" , "" + m.getAlbumName() + "", "" + m.getMusicUrl() + "", "" + m.getImageUrl() + "", "" + m.getLyrics() + "" , "" + m.getPublishDate() + "" , "" + m.getDescription() + "", "" + m.getUploadedBy() + "", "" + DateUtil.getDateTime() + "", "" + m.getFileLength() + "", "" + m.getMusicLength() + "")"""
+before_16/String1.txt,"""Insert into "" + dbTableName + "" (Username,Password) values('"" + username + ""','"" + password + ""');"""
+before_160/String1.txt,"""update inception_music set CTR = CTR + 1 where id = "" + id"
+before_161/String1.txt,"""update inception_music set CTR = CTR + 1 where musicUrl = "" + musicUrl"
+before_162/String1.txt,"""delete from inception_music where id = "" + id"
+before_164/String1.txt,"""select * from inception_music where musicUrl = "" + url"
+before_165/String1.txt,"""update inception_music set musicName = "" + music.getMusicName() + "", musicStyle = "" + music.getMusicStyle() + "","" + "" musicLanguage = "" + music.getMusicLanguage() + "", artistName = "" + music.getArtistName() + "", albumName = "" + music.getAlbumName() + "" where id = "" + music.getId()"
+before_166/String1.txt,"""update inception_music set imageUrl = "" + m.getImageUrl() + "" where id = "" + m.getId()"
+before_167/String1.txt,"""select * from inception_music where musicUrl = "" + url"
+before_168/String1.txt,"""update inception_music set lyrics = "" + lrc + "" where id = "" + id"
+before_169/String1.txt,"""select * from inception_music where albumName = "" + album"
+before_17/String1.txt,"""Select Password from "" + dbTableName + "" where Username = '"" + username + ""';"""
+before_170/String1.txt,"""select * from inception_music where albumName = "" + album"
+before_172/String1.txt,"""update member set islogin=0 where id="" + dbid"
+before_173/String1.txt,"""insert into book values ("" + id + "", '"" + book.getName() + ""', "" + book.getIdAuthor() + "")"""
+before_174/String1.txt,"""SELECT id,name,idAuthor FROM book where id="" + idBook"
+before_175/String1.txt,"""SELECT id,idAuthor FROM book where name='"" + bookName + ""'"""
+before_176/String1.txt,"""delete FROM book where id = "" + book.getId() + "" and name= '"" + book.getName() + ""'"""
+before_177/String1.txt,"""update Book set name = '"" + book.getName() + ""', idAuthor ="" + book.getIdAuthor() + ""where id ="" + book.getId()"
+before_178/String1.txt,"""SELECT * from shipping.ica_couriers where subo in ("" + suborder + "")"""
+before_179/String1.txt,"""insert into Guitar(serialNumber,price,builder,type,backWood,topWood) values("" + guitar.getSerialNumber() + "","" + guitar.getPrice() + "","" + guitar.getSpec().getBuilder() + "","" + guitar.getSpec().getType() + "","" + guitar.getSpec().getBackWood() + "","" + guitar.getSpec().getTopWood() + "")"""
+before_18/String1.txt,"""UPDATE Resurse_Financiare  SET descriere="" + rf.getDescriere() + "",suma="" + rf.getSuma() + "", tip="" + tip + "" where id="" + rf.getId()"
+before_180/String1.txt,"""select * from guitar where type= "" + type"
+before_181/String1.txt,"""delete from guitar where SerialNumber = "" + SerialNumber"
+before_182/String1.txt,"""insert into TB_DATE values ( "" + record.getdYear4() + "","" + new java.sql.Date(record.getdDate().getTime()) + "","" + new java.sql.Time(record.getdTime().getTime()) + "","" + new java.sql.Timestamp(record.getdDatetime().getTime()) + "","" + new java.sql.Timestamp(record.getdTimestamp().getTime()) + "")"""
+before_183/String1.txt,"""update "" + getIncrementerName() + "" set "" + columnName + "" = last_insert_id("" + columnName + "" + "" + getCacheSize() + "")"""
+before_184/String1.txt,"""insert into TB_DATE values ( "" + record.getdYear4() + "","" + new java.sql.Date(record.getdDate().getTime()) + "","" + new java.sql.Time(record.getdTime().getTime()) + "","" + new java.sql.Timestamp(record.getdDatetime().getTime()) + "","" + new java.sql.Timestamp(record.getdTimestamp().getTime()) + "")"""
+before_186/String1.txt,"""update TB_DATE set d_date = "" + new java.sql.Date(record.getdDate().getTime()) + "", d_time = "" + new java.sql.Time(record.getdTime().getTime()) + "", d_datetime = "" + new java.sql.Timestamp(record.getdDatetime().getTime()) + "", d_timestamp = "" + new java.sql.Timestamp(record.getdTimestamp().getTime()) + ""where d_year_4 = "" + record.getdYear4()"
+before_187/String1.txt,"""INSERT INTO cluster_table VALUES("" + ""'"" + cluster.getName() + ""')"""
+before_188/String1.txt,"""INSERT INTO template_table VALUES("" + ""'"" + template.getName() + ""',"" + ""'"" + template.getPath() + ""',"" + ""'"" + template.getMd5() + ""')"""
+before_189/String1.txt,"""INSERT INTO virtual_machine_host_table VALUES("" + ""'"" + host.getHostName() + ""',"" + ""'"" + host.getIp() + ""',"" + ""'"" + host.getNaeglingPort() + ""')"""
+before_19/String1.txt,"""SELECT * FROM "" + tableName + "" WHERE stock = \"""" + stockIndex + ""\"";"""
+before_191/String1.txt,"""INSERT INTO job_table VALUES("" + ""'"" + job.getName() + ""',"" + ""'"" + job.getCluster() + ""',"" + +job.getStatus() + "")"""
+before_192/String1.txt,"""INSERT INTO job_file_table VALUES("" + ""'"" + file.getName() + ""',"" + ""'"" + job.getName() + ""',"" + ""'"" + file.getAbsolutePath() + ""',"" + """" + type + "","" + """" + status + "")"""
+before_197/String1.txt,"""DELETE FROM cluster_table where name='"" + name + ""'"""
+before_199/String1.txt,"""DELETE FROM virtual_master_node_table where domain='"" + domain + ""'"""
+before_2/String1.txt,"""DELETE FROM COUNTRY WHERE COUNTRY_ID = "" + country.getCountry_id()"
+before_20/String1.txt,"""SELECT COURSENAME,TEACHER,ROOMID,COURSERDATE FROM course  WHERE COURSEID="" + courseid"
+before_200/String1.txt,"""SELECT * FROM virtual_machine_host_table WHERE hostname='"" + hostname + ""'"""
+before_201/String1.txt,"""SELECT * FROM template_table WHERE name='"" + name + ""'"""
+before_202/String1.txt,"""SELECT * FROM ndcodes WHERE Code = "" + code"
+before_203/String1.txt,"""INSERT INTO ndcodes (Code, Description) "" + ""VALUES ("" + med.getNDCode() + "","" + med.getDescription() + "")"""
+before_204/String1.txt,"""UPDATE ndcodes SET Description = "" + med.getDescription() + ""WHERE Code = "" + med.getNDCode()"
+before_205/String1.txt,"""DELETE FROM ndcodes WHERE Code="" + med.getNDCode()"
+before_206/String1.txt,"""SELECT CUSTOMER_ID FROM CUSTOMER WHERE customerid = ?"""
+before_207/String1.txt,"""INSERT INTO user(name,pass) VALUES("" + name + "","" + pass + "")"""
+before_209/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_IS_PDI + ""=false "" + ""order by "" + FIELD_CODICE"
+before_21/String1.txt,"""SELECT PASSWORD FROM ADMIN WHERE EMAIL LIKE '"" + username + ""';"""
+before_210/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_IS_PDI + ""=true"" + ""order by "" + FIELD_CODICE"
+before_211/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID + ""= "" + search_id"
+before_212/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID + ""= "" + search_id"
+before_213/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_CODICE + ""= "" + search_code"
+before_214/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID_MAPPA + ""="" + search_id + "" AND "" + FIELD_IS_PDI + ""=false order by "" + FIELD_CODICE"
+before_215/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID_PIANO + ""="" + search_id + "" AND "" + FIELD_IS_PDI + ""=false order by "" + FIELD_CODICE"
+before_216/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID_MAPPA + ""="" + search_id + "" AND "" + FIELD_IS_PDI + ""=true order by "" + FIELD_CODICE"
+before_217/String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_CODICE + "","" + FIELD_COORD_X + "","" + FIELD_COORD_Y + "","" + FIELD_WIDTH + "","" + FIELD_ID_MAPPA + "","" + FIELD_ID_PIANO + "") "" + ""values("" + nodo.getCodice() + "","" + nodo.getCoord_X() + "","" + nodo.getCoord_Y() + "","" + nodo.getLarghezza() + "","" + nodo.getID_mappa() + "","" + nodo.getID_piano() + "")"""
+before_218/String1.txt,"""update "" + TBL_NAME + "" set "" + FIELD_CODICE + ""="" + nodo.getCodice() + "", "" + FIELD_COORD_X + ""="" + nodo.getCoord_X() + "", "" + FIELD_COORD_Y + ""="" + nodo.getCoord_Y() + "", "" + FIELD_WIDTH + ""="" + nodo.getLarghezza() + "" "" + ""where "" + FIELD_ID + ""="" + id_nodo"
+before_219/String1.txt,"""delete from "" + TBL_NAME + "" where "" + FIELD_ID + ""="" + id_nodo"
+before_220/String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_CODICE + "","" + FIELD_IS_PDI + "","" + FIELD_TIPO + "","" + FIELD_COORD_X + "","" + FIELD_COORD_Y + "","" + FIELD_WIDTH + "","" + FIELD_LENGTH + "","" + FIELD_ID_MAPPA + "","" + FIELD_ID_PIANO + "") values("" + pdi.getCodice() + "","" + true + "","" + pdi.getTipo() + "","" + pdi.getCoord_X() + "","" + pdi.getCoord_Y() + "","" + pdi.getLarghezza() + "","" + pdi.getLunghezza() + "","" + pdi.getID_mappa() + "","" + pdi.getID_piano() + "")"""
+before_221/String1.txt,"""update "" + TBL_NAME + "" set "" + FIELD_CODICE + ""="" + pdi.getCodice() + "", "" + FIELD_TIPO + ""="" + pdi.getTipo() + "", "" + FIELD_COORD_X + ""="" + pdi.getCoord_X() + "", "" + FIELD_COORD_Y + ""="" + pdi.getCoord_Y() + "", "" + FIELD_WIDTH + ""="" + pdi.getLarghezza() + "", "" + FIELD_LENGTH + ""= "" + pdi.getLunghezza() + "" where "" + FIELD_ID + ""="" + id_pdi"
+before_222/String1.txt,"""SELECT * FROM notes WHERE id_user = "" + owner.getIdentifier()"
+before_223/String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_EMERG + "") values("" + true + "")"""
+before_224/String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_EMERG + "") values("" + false + "")"""
+before_225/String1.txt,"""SELECT * FROM npc WHERE npc_id = "" + id"
+before_226/String1.txt,"""SELECT * FROM npc WHERE npc_name = "" + name"
+before_227/String1.txt,"""Update npc set npc_name = "" + npc.getName() + "",npc_lvl = "" + npc.getLvl() + "", "" + ""currency = "" + npc.getCurrency() + "", job_id = "" + npc.getJobClass() + "" WHERE npc_id="" + npc.getId()"
+before_228/String1.txt,"""SELECT * FROM officeVisit WHERE patientMID="" + patientID"
+before_229/String1.txt,"""SELECT * FROM officeVisit WHERE visitID="" + id"
+before_230/String1.txt,"""SELECT DateOfBirth FROM patients WHERE MID="" + patientMID"
+before_231/String1.txt,"""INSERT INTO OptionVisite (id, label, niveau, parent, type, typeB) VALUES ("" + obj.getId() + "", "" + obj.getLabel() + "", "" + obj.getNiveau() + "", "" + obj.getParent() + "", "" + obj.getType() + "", "" + obj.getTypeB() + "")"""
+before_232/String1.txt,"""DELETE FROM OptionVisite WHERE id = "" + obj.getId()"
+before_233/String1.txt,"""UPDATE OptionVisite SET label = "" + obj.getLabel() + "", niveau = "" + obj.getNiveau() + "", parent = "" + obj.getParent() + "", type = "" + obj.getType() + "", typeB = "" + obj.getTypeB() + "" WHERE id = "" + obj.getId()"
+before_234/String1.txt,"""SELECT * FROM OptionVisite WHERE id = "" + id"
+before_235/String1.txt,"""SELECT * FROM OptionVisite WHERE type = "" + valeur + "" and niveau = 0"""
+before_236/String1.txt,"""SELECT COUNT(*) AS nb FROM OptionVisite WHERE parent = "" + id"
+before_237/String1.txt,"""SELECT * FROM OptionVisite WHERE parent = "" + id"
+before_238/String1.txt,"""SELECT * FROM OptionVisite WHERE label = "" + label"
+before_239/String1.txt,"""INSERT INTO public.ordendecompra(\n"" + ""	fechadeorden, idproveedor, centrodecostos, "" + ""contacto, concargoa, transportador, "" + ""numerodeguia, formadepago, "" + ""idusuario, observaciones, "" + ""iva, exentodeiva, valoriva)\n"" + ""	VALUES ('"" + oc.getFechadeorden() + ""', "" + oc.getProveedor().getIdproveedor() + "", '"" + oc.getCentrodecostos() + ""', "" + "" '"" + oc.getContacto() + ""', '"" + oc.getCargoflete() + ""', '"" + oc.getTransportador() + ""', "" + "" '"" + oc.getNumerodeguia() + ""', '"" + oc.getFormadepago() + ""', "" + "" "" + model.Usuario.getInstanceUser(0, null, null, null).getIdusuario() + "", '"" + oc.getObservaciones() + ""', "" + "" "" + oc.getIva() + "", '"" + oc.isExentodeiva() + ""' , "" + oc.getValoriva() + "");"""
+before_24/String1.txt,"""SELECT * FROM ADMIN WHERE EMAIL LIKE '"" + username + ""';"""
+before_240/String1.txt,"""SELECT * FROM HISTORY WHERE CUSTOMER_ID = "" + id"
+before_241/String1.txt,"""SELECT ITEM_NAME,QUANTITY,PRICE FROM HISTORY WHERE CUSTOMER_ID = "" + id + "" ORDER BY ORDER_ID DESC"""
+before_242/String1.txt,"""INSERT INTO OrderList(bid,pid) "" + ""VALUES ("" + orderlist.getBid() + "","" + orderlist.getPid() + "")"""
+before_243/String1.txt,"""INSERT INTO ActivityBooking(id, guestId, date, status) VALUES ('"" + nextActivityBookingId + ""','"" + acticityBookingObj.getGuest().getId() + ""','"" + acticityBookingObj.getDate() + ""','"" + acticityBookingObj.getStatus() + ""')"""
+before_244/String1.txt,"""UPDATE ActivityBooking SET "" + "" status= '"" + activityBookingObj.getStatus() + ""' "" + ""WHERE id= '"" + activityBookingObj.getId() + ""'"""
+before_245/String1.txt,"""SELECT * FROM `order_movie` where order_id = "" + order_id"
+before_246/String1.txt,"""DELETE FROM ActivityBooking WHERE id= '"" + id + ""'"""
+before_247/String1.txt,"""SELECT * FROM `order_movie` where order_id = "" + order_id"
+before_248/String1.txt,"""SELECT * FROM course WHERE idcourse != "" + oldCourseId + "" ORDER BY courname;"""
+before_249/String1.txt,"""insert into atm_user"" + ""(id,userName,idCardNumber,gender,birthday,address,balance,account, password,type,state,remark)"" + ""value ("" + user.getId() + "","" + user.getUserName() + "","" + user.getIdCardNumber() + "","" + user.getGender() + "","" + date + "","" + user.getAddress() + "","" + user.getBalance() + "","" + user.getAccount() + "","" + user.getPassword() + "","" + user.getType() + "","" + user.getState() + "","" + user.getRemark() + "")"""
+before_250/String1.txt,"""DELETE FROM ActivityBooking WHERE guestId= '"" + guestId + ""' AND date= '"" + date + ""'"""
+before_251/String1.txt,s1.concat(s2)
+before_254/String1.txt,"""select * from tablesr where dbname='"" + tableeasy.MainActivity.databases[tableeasy.MainActivity.selecteddata] + ""'"""
+before_255/String1.txt,"""SELECT title,docfile FROM document WHERE iddocument = "" + selFile.getDocid()"
+before_256/String1.txt,"""SELECT COUNT(*) AS activityBokingInstances FROM ActivityBooking "" + "" WHERE date='"" + date + ""' AND guestId='"" + guestId + ""' AND status<>'Canceled'"""
+before_257/String1.txt,"""SELECT docfile FROM document WHERE iddocument = "" + selFile.getDocid()"
+before_258/String1.txt,"""SELECT docfile FROM document WHERE iddocument = "" + selFile.getDocid()"
+before_26/String1.txt,"""DELETE from ADMIN where EMAIL LIKE '"" + email + ""';"""
+before_260/String1.txt,"""SELECT DISTINCT course.idcourse, courname, faculty FROM course, instrcourdoc "" + ""WHERE idinstructor = "" + instrId + "" AND course.idcourse = instrcourdoc.idcourse ORDER BY courname"""
+before_261/String1.txt,"""SELECT document.iddocument,title,uploader,uploaddate,filetype FROM instructor,document,course,instrcourdoc WHERE "" + ""instructor.idinstructor = instrcourdoc.idinstructor AND instrcourdoc.iddocument = document.iddocument AND "" + ""instrcourdoc.iddocument = document.iddocument AND instrcourdoc.idcourse = course.idcourse AND course.courname = "" + courseName + ""AND instructor.idinstructor = "" + instrId + "" ORDER BY uploaddate DESC"""
+before_262/String1.txt,"""UPDATE ActivityLine SET "" + "" status= '"" + activityLine.getStatus() + ""' "" + ""WHERE activityId= '"" + activityLine.getActivity().getID() + ""' "" + ""AND bookingId= '"" + activityLine.getActivityBooking().getId() + ""' "" + ""AND facilityId= '"" + activityLine.getFacility().getId() + ""' "" + ""AND date= '"" + activityLine.getDate() + ""' "" + ""AND startHour= '"" + activityLine.getStartHour() + ""' """
+before_263/String1.txt,"""DELETE FROM ActivityLine WHERE activityId= '"" + activityId + ""' AND bookingId= '"" + bookingId + ""' AND date= '"" + date + ""' AND startHour= '"" + startHour + ""'"""
+before_264/String1.txt,"""INSERT INTO T_HT_ATIVIDADE (CD_ATIVIDADE, DT_ATIVIDADE, DS_ATIVIDADE, CD_USUARIO) VALUES (SQ_T_HT_ATIVIDADE.NEXTVAL, "" + data + "", "" + atividadesFisicas.getDs_atividade() + "", "" + atividadesFisicas.getCd_usuario() + "")"""
+before_265/String1.txt,"""UPDATE T_HT_ATIVIDADE SET CD_ATIVIDADE = "" + atividadesFisicas.getCd_atividade() + "", DS_ATIVIDADE = "" + atividadesFisicas.getDs_atividade() + "", CD_USUARIO = "" + atividadesFisicas.getCd_usuario() + "" WHERE CD_ATIVIDADE = "" + atividadesFisicas.getCd_usuario()"
+before_266/String1.txt,"""DELETE FROM T_HT_ATIVIDADE WHERE CD_ATIVIDADE = "" + cd_atividade"
+before_267/String1.txt,"""SELECT * FROM T_HT_ATIVIDADE WHERE CD_ATIVIDADE = "" + codigoBusca"
+before_268/String1.txt,"""INSERT INTO ParcClient (codeTParc, codeCliPros, quantite, date, nom) VALUES ("" + obj.getCodeTParc() + "", "" + obj.getCodeCliPros() + "", "" + Integer.toString(obj.getQuantite()) + "", "" + (obj.getDate() == null) ? """" : formatter.format(obj.getDate()) + "", "" + obj.getNom() + "")"""
+before_269/String1.txt,"""DELETE FROM ParcClient WHERE id = "" + obj.getId()"
+before_27/String1.txt,"""UPDATE tblAchievements SET fldProgress="" + newProgressResult + "" WHERE id="" + ID + "";"""
+before_270/String1.txt,"""UPDATE ParcClient SET codeTParc = "" + obj.getCodeTParc() + "", codeCliPros = "" + obj.getCodeCliPros() + "", quantite = "" + Integer.toString(obj.getQuantite()) + "", date = "" + formatter.format(obj.getDate()) + "", nom = "" + obj.getNom() + "" WHERE id = "" + obj.getId()"
+before_271/String1.txt,"""SELECT * FROM ParcClient WHERE id = "" + id"
+before_272/String1.txt,"""SELECT * FROM ParcClient WHERE codeTParc = "" + idType + "" AND codeCliPros = "" + codeClient"
+before_273/String1.txt,"""DELETE FROM ActivityLine WHERE bookingId= '"" + bookingId + ""'"""
+before_274/String1.txt,"""SELECT SUM(quantite) AS nb FROM ParcClient WHERE codeTParc = "" + codeParc + "" AND codeCliPros IN"" + ""  (SELECT cClient FROM Client WHERE cRep = "" + PanelStats.commercialStats.getCodeCommercial() + ""  OR cClient IN"" + ""    (SELECT codeCliPros FROM Revoir WHERE codeUtilisateur = "" + PanelStats.commercialStats.getId() + "") )"""
+before_275/String1.txt,"""SELECT SUM(quantite) AS nb FROM ParcClient WHERE codeTParc = "" + codeParc + "" AND codeCliPros IN "" + ""  (SELECT codeProspect FROM Prospect WHERE cRep =  "" + PanelStats.commercialStats.getCodeCommercial() + ""  OR codeProspect IN"" + ""    (SELECT codeCliPros FROM Revoir WHERE codeUtilisateur = "" + PanelStats.commercialStats.getId() + "")  )"""
+before_276/String1.txt,"""SELECT idPasta, descPasta FROM adv_pendencia.tab_pasta where statusPasta = 'livre'"""
+before_277/String1.txt,"""SELECT COUNT(*) AS activityLineInstances1 FROM ActivityLine "" + ""WHERE activityId= '"" + activityId + ""' "" + ""AND bookingId= '"" + bookingId + ""' "" + ""AND date= '"" + date + ""' "" + ""AND startHour= '"" + startHour + ""' "" + ""AND facilityId= '"" + facilityId + ""' "" + ""AND status= '"" + status + ""'"""
+before_278/String1.txt,"""update adv_pendencia.tab_pasta set statusPasta = 'ocupado' where idPasta = "" + filtro.getPasta()"
+before_279/String1.txt,"""update adv_pendencia.tab_pasta set statusPasta = 'livre' where idPasta = "" + pendencia.getIdPasta()"
+before_28/String1.txt,"""INSERT INTO "" + tableLabel + "" (fldAchievementTitle,fldProgress,fldBronzeGoal,fldSilverGoal,fldGoldGoal,fldStatus) VALUES("" + fldAchievementTitle + "","" + fldProgress + "","" + fldBronzeGoal + "","" + fldSilverGoal + "","" + fldGoldGoal + "","" + fldStatus + "")"""
+before_280/String1.txt,"""SELECT firstName, lastName FROM patients WHERE MID="" + mid"
+before_281/String1.txt,"""SELECT role FROM users WHERE MID="" + mid + "" AND Role="" + role"
+before_282/String1.txt,"""INSERT INTO patients(MID) VALUES(NULL)"""
+before_283/String1.txt,"""SELECT * FROM patients WHERE MID = "" + mid"
+before_284/String1.txt,"""SELECT * FROM course WHERE idcourse != "" + oldCourseId + "" ORDER BY courname;"""
+before_285/String1.txt,"""SELECT * FROM patients WHERE MID="" + pid"
+before_286/String1.txt,"""SELECT * FROM declaredhcp, personnel "" + ""WHERE PatientID="" + pid + "" AND personnel.MID=declaredhcp.HCPID"""
+before_287/String1.txt,"""INSERT INTO declaredhcp(PatientID, HCPID) VALUES("" + pid + "","" + hcpID + "")"""
+before_288/String1.txt,"""SELECT COUNT(*) AS activityLineInstances2 FROM ActivityLine "" + "" WHERE date='"" + date + ""' AND startHour= '"" + startHour + ""' AND instructorId= '"" + instructorId + ""'"" + "" AND status<>'Canceled' """
+before_289/String1.txt,"""DELETE FROM declaredhcp WHERE PatientID="" + pid + "" AND HCPID="" + hcpID"
+before_29/String1.txt,"""UPDATE tblAchievements SET fldStatus="" + editAchievementStatus + "" WHERE id="" + editIDResult + "";"""
+before_290/String1.txt,"""SELECT * FROM declaredhcp WHERE PatientID="" + pid + "" AND HCPID="" + hcpid"
+before_291/String1.txt,"""SELECT patients.* FROM representatives, patients "" + ""WHERE RepresenterMID="" + pid + "" AND RepresenteeMID=patients.MID"""
+before_292/String1.txt,"""SELECT patients.* FROM representatives, patients, users "" + ""WHERE RepresenterMID="" + pid + "" AND RepresenteeMID=patients.MID AND users.MID=patients.MID AND users.isDependent=1"""
+before_293/String1.txt,"""SELECT patients.* FROM representatives, patients "" + ""WHERE RepresenteeMID="" + pid + "" AND RepresenterMID=patients.MID"""
+before_294/String1.txt,"""SELECT * FROM representatives WHERE RepresenterMID="" + representer + "" AND RepresenteeMID="" + representee"
+before_295/String1.txt,"""INSERT INTO representatives(RepresenterMID,RepresenteeMID) VALUES ("" + representer + "","" + representee + "")"""
+before_296/String1.txt,"""SELECT * FROM patients WHERE MID="" + representee + "" AND DateOfDeactivation IS NULL"""
+before_297/String1.txt,"""SELECT * FROM patients WHERE MID="" + pid + "" AND DateOfDeactivation IS NULL"""
+before_298/String1.txt,"""DELETE FROM representatives WHERE RepresenterMID="" + representer + "" AND RepresenteeMID="" + representee"
+before_299/String1.txt,"""SELECT COUNT(*) AS activityLineNumbers FROM ActivityLine "" + "" WHERE bookingId='"" + bookingId + ""' AND date= '"" + date + ""' AND status<>'Canceled' """
+before_3/String1.txt,"""Insert into Alte_Activitati_CD values("" + alteActivitati.getId_Cadru_Didactic() + "","" + alteActivitati.getPregAdmitere() + "","" + alteActivitati.getComisiiAbsolvire() + "","" + alteActivitati.getConsultatii() + "","" + alteActivitati.getExamene() + "","" + alteActivitati.getIndrLucrDisert() + "","" + alteActivitati.getIndrLucrLic() + "","" + alteActivitati.getIndrProiect() + "","" + alteActivitati.getLucrControl() + "","" + alteActivitati.getSeminariiCerc() + "")"""
+before_30/String1.txt,"""UPDATE tblAchievements SET fldProgress="" + newProgressResult + "" WHERE id="" + ID + "";"""
+before_302/String1.txt,"""SELECT * FROM ( "" + ""SELECT DISTINCT patients.* FROM patients, declaredhcp, ovdiagnosis, officevisits, ovmedication"" + "" WHERE"" + "" declaredhcp.HCPID = "" + hcpMID + "" AND patients.MID = declaredhcp.PatientID"" + "" AND (ovdiagnosis.VisitID = officevisits.ID"" + "" AND officevisits.PatientID = declaredhcp.PatientID"" + "" AND ((ovdiagnosis.ICDCode >= "" + 250.0f + "" AND ovdiagnosis.ICDCode < "" + 251.0f + "")"" + "" OR (ovdiagnosis.ICDCode >= "" + 493.0f + "" AND ovdiagnosis.ICDCode < "" + 494.0f + "")"" + "" OR (ovdiagnosis.ICDCode >= "" + 390.0f + "" AND ovdiagnosis.ICDCode < "" + 460.99f + "")))"" + "" UNION ALL"" + "" SELECT DISTINCT patients.* From patients, declaredhcp, ovdiagnosis, officevisits, ovmedication "" + "" WHERE"" + "" declaredhcp.HCPID = "" + hcpMID + "" AND patients.MID = declaredhcp.PatientID"" + "" AND (declaredhcp.PatientID = officevisits.PatientID"" + "" AND officevisits.ID = ovmedication.VisitID"" + "" AND ovmedication.EndDate BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)))"" + "" AS final"" + "" GROUP BY final.MID HAVING COUNT(*) = 2"" + "" ORDER BY final.lastname ASC, final.firstname ASC"""
+before_303/String1.txt,"""SELECT users.MID AS MID, users.Role AS Role, patients.firstName AS firstName, patients.lastName AS lastName FROM users INNER JOIN patients ON users.MID = patients.MID WHERE users.MID="" + Long.toString(id) + "";"""
+before_304/String1.txt,"""SELECT COUNT(*) AS activityLineInstances3 FROM ActivityLine "" + "" WHERE activityId= '"" + activityId + ""' "" + ""AND date= '"" + date + ""' "" + ""AND startHour= '"" + startHour + ""' "" + ""AND facilityId= '"" + facilityId + ""' "" + ""AND status<>'Canceled' """
+before_306/String1.txt,"""SELECT COUNT(*) AS activityLineInstances3 FROM ActivityLine "" + "" WHERE bookingId= '"" + bookingId + ""' "" + ""AND date= '"" + date + ""' "" + ""AND startHour= '"" + startHour + ""' "" + ""AND startHour= '"" + startHour + ""' "" + ""AND status<>'Canceled' """
+before_307/String1.txt,"""INSERT INTO Pays (codePays, nomPays) VALUES ("" + obj.getCodePays() + "", "" + obj.getNomPays() + "")"""
+before_308/String1.txt,"""DELETE FROM Pays WHERE id = "" + obj.getId()"
+before_309/String1.txt,"""UPDATE Pays SET codePays = "" + obj.getCodePays() + "", nomPays = "" + obj.getNomPays() + "" WHERE id = "" + obj.getId()"
+before_31/String1.txt,"""SELECT fldProgress FROM tblAchievements WHERE id="" + ID"
+before_310/String1.txt,"""SELECT * FROM Pays WHERE id = "" + id"
+before_311/String1.txt,"""SELECT * FROM Pays WHERE codePays = "" + code"
+before_316/String1.txt,"""SELECT Id FROM pedido"" + Where(Fecha, iNumArticulos, dTotal, iCodPostal, sDirEnvio)"
+before_317/String1.txt,"""INSERT INTO ActivityType(id, name, maxParticipants) VALUES ('"" + nextActivityTypeId + ""','"" + activityTypeObj.getName() + ""','"" + activityTypeObj.getMaxParticipants() + ""')"""
+before_318/String1.txt,"""INSERT INTO tbl_peliculas (nombre, genero, clasificacion, duracion, imagen) VALUES ("" + entidad.getNombre() + "", "" + entidad.getGenero() + "", "" + entidad.getClasificacion() + "", "" + entidad.getDuracion() + "", "" + entidad.getImagen() + "")"""
+before_319/String1.txt,"""UPDATE tbl_peliculas SET nombre = "" + entidad.getNombre() + "", genero = "" + entidad.getGenero() + "", clasificacion = "" + entidad.getClasificacion() + "", duracion = "" + entidad.getDuracion() + "", imagen = "" + entidad.getImagen() + "" WHERE pk_pelicula = "" + entidad.getIdPelicula()"
+before_320/String1.txt,"""DELETE FROM tbl_peliculas WHERE pk_pelicula = "" + entidad.getIdPelicula()"
+before_321/String1.txt,"""SELECT * FROM tbl_peliculas WHERE nombre = "" + id"
+before_322/String1.txt,"""SELECT * FROM tbl_peliculas WHERE pk_pelicula = "" + id"
+before_323/String1.txt,"""SELECT nombre FROM tbl_peliculas WHERE nombre = "" + entidad.getNombre()"
+before_325/String1.txt,"""INSERT INTO adv_pendencia.tab_pedencia VALUES(null, "" + filtro.getDescPendencia() + "",'Em aberto', "" + filtro.getNomPendencia() + "", null, "" + filtro.getPasta() + "","" + data + "")"""
+before_326/String1.txt,"""UPDATE ActivityType SET "" + ""name= '"" + activityTypeNewObj.getName() + ""', "" + ""maxParticipants= '"" + activityTypeNewObj.getMaxParticipants() + ""' "" + ""WHERE id= '"" + activityTypeNewObj.getID() + ""'"""
+before_327/String1.txt,"""insert into personas (NOMBRE,EDAD,PESO)"" + ""values ("" + p.getNombre() + "","" + p.getEdad() + "","" + p.getPeso() + "")"""
+before_328/String1.txt,"""delete from personas where id = "" + id"
+before_329/String1.txt,"""DELETE FROM ActivityType WHERE id= '"" + id + ""'"""
+before_33/String1.txt,"""DELETE FROM tblAchievements WHERE id = "" + id"
+before_330/String1.txt,"""INSERT INTO users (MID, PASSWORD, SALT, ROLE, sQuestion, sAnswer) VALUES ("" + mid + "","" + hashedPassword + "","" + salt + "","" + role.toString() + "","" + ""Enter the random password given in your account email"" + "","" + password + "")"""
+before_331/String1.txt,"""update personas set NOMBRE="" + p.getNombre() + "", EDAD="" + p.getEdad() + "", PESO="" + p.getPeso() + "" where id="" + p.getId()"
+before_332/String1.txt,"""select id,nombre,edad,peso from personas where id ="" + id"
+before_333/String1.txt,"""delete from Persona where id = '"" + id + ""';"""
+before_334/String1.txt,"""UPDATE users SET sQuestion = "" + question + "", sAnswer = "" + answer + "" WHERE MID = "" + mid"
+before_335/String1.txt,"""SELECT role FROM users WHERE MID="" + mid"
+before_336/String1.txt,"""SELECT DateOfDeactivation FROM patients WHERE MID="" + mid"
+before_337/String1.txt,"""UPDATE users SET password="" + newPassword + "", salt="" + salt + "" WHERE MID="" + mid"
+before_338/String1.txt,"""SELECT sQuestion FROM users WHERE MID="" + mid"
+before_339/String1.txt,"""DELETE FROM ActivityType WHERE name= '"" + name + ""'"""
+before_34/String1.txt,"""SELECT * FROM tblAchievements WHERE fldStatus='Active'"""
+before_340/String1.txt,"""SELECT firstName, lastName FROM personnel WHERE MID="" + mid"
+before_341/String1.txt,"""SELECT MAX(users.mid) FROM users WHERE mid BETWEEN "" + minID + "" AND "" + maxID"
+before_342/String1.txt,"""INSERT INTO personnel(MID, Role) VALUES("" + Long.valueOf(nextID).toString() + "","" + role.name() + "")"""
+before_343/String1.txt,"""SELECT * FROM personnel WHERE MID = "" + mid"
+before_344/String1.txt,"""SELECT * FROM personnel WHERE MID="" + pid"
+before_345/String1.txt,"""SELECT * FROM hcpassignedhos hah,hospitals h "" + ""WHERE hah.HCPID="" + mid + "" AND hah.HosID=h.HospitalID ORDER BY HospitalName ASC"""
+before_346/String1.txt,"""SELECT DISTINCT hospitals.* FROM hcpassignedhos hah "" + ""INNER JOIN hcprelations ON hah.HCPID = hcprelations.HCP "" + ""INNER JOIN hospitals ON hah.hosID = hospitals.HospitalID "" + ""WHERE hcprelations.UAP="" + mid + "" ORDER BY HospitalName ASC"""
+before_347/String1.txt,"""SELECT sAnswer FROM users WHERE MID="" + mid"
+before_348/String1.txt,"""SELECT COUNT(*) AS activityTypeInstances FROM ActivityType "" + "" WHERE id<> '"" + id + ""' AND name= '"" + name + ""'"""
+before_349/String1.txt,"""SELECT * FROM hcpassignedhos hah inner join personnel p where hah.hosID = "" + hosid + "" and hah.HCPID = p.MID and p.role = 'hcp'"""
+before_35/String1.txt,"""SELECT * FROM ADMIN WHERE EMAIL LIKE '"" + email + ""';"""
+before_350/String1.txt,"""SELECT * FROM personnel where role in ('hcp','uap','er') """
+before_351/String1.txt,"""SELECT * FROM personnel WHERE MID IN (SELECT UAP FROM hcprelations WHERE HCP="" + hcpid + "")"""
+before_352/String1.txt,"""UPDATE loginfailures SET FailureCount=FailureCount+1, lastFailure=CURRENT_TIMESTAMP WHERE IPAddress="" + ipAddr"
+before_353/String1.txt,"""UPDATE resetpasswordfailures SET failurecount=failurecount+1 WHERE ipaddress="" + ipAddr"
+before_354/String1.txt,"""SELECT * FROM resetpasswordfailures WHERE IPADDRESS="" + ipAddr"
+before_355/String1.txt,"""SELECT * FROM loginfailures WHERE IPADDRESS="" + ipAddr"
+before_356/String1.txt,"""INSERT INTO loginfailures(IPAddress, failureCount) VALUES("" + ipAddr + "","" + failureCount + "")"""
+before_357/String1.txt,"""INSERT INTO resetpasswordfailures(IPAddress, failureCount) VALUES("" + ipAddr + "","" + failureCount + "")"""
+before_358/String1.txt,"""UPDATE loginfailures SET failureCount=0 WHERE IPAddress="" + ipAddr"
+before_359/String1.txt,"""UPDATE loginfailures SET failureCount=0 WHERE IPAddress="" + ipAddr"
+before_361/String1.txt,"""UPDATE resetpasswordfailures SET failureCount=0 WHERE IPAddress="" + ipAddr"
+before_362/String1.txt,"""SELECT * FROM users WHERE MID="" + mid"
+before_363/String1.txt,"""SELECT * FROM user WHERE Login = '"" + uname + ""' AND Password="" + ""'"" + pwd + ""'"""
+before_364/String1.txt,"""Select * FROM users WHERE MID="" + mid + "" AND password="" + DigestUtils.sha256Hex(password + salt)"
+before_365/String1.txt,"""DELETE FROM credit_card WHERE cardnum = '"" + cardNum + ""';"""
+before_366/String1.txt,"""SELECT smartreporter.field.Name, smartreporter.field.Size"" + "" FROM "" + ""smartreporter.field, smartreporter.template, smartreporter.user"" + "" WHERE "" + ""smartreporter.field.TemplateID=smartreporter.template.ID"" + "" AND "" + ""smartreporter.template.ACTIVE=1 "" + "" AND "" + ""smartreporter.template.User_ID="" + userID"
+before_367/String1.txt,"""UPDATE users SET isDependent="" + dependency + "" WHERE MID="" + mid"
+before_368/String1.txt,"""SELECT * FROM users WHERE MID="" + mid + "" AND isDependent=1"""
+before_369/String1.txt,"""SELECT "" + column + "" FROM "" + table + "" WHERE id="" + id"
+before_37/String1.txt,"""DELETE from ITEM where ITEM_NAME LIKE '"" + item_name + ""';"""
+before_370/String1.txt,"""INSERT into user(name, username, password) values('"" + name + ""',"" + ""'"" + uname + ""','"" + pwd + ""')"""
+before_371/String1.txt,"""UPDATE "" + table + "" SET "" + column + ""="" + image + "" WHERE id="" + id"
+before_372/String1.txt,"""INSERT INTO "" + table + "" VALUES('', "" + readFile(filename) + "" , "" + desc + "" "" + "")"""
+before_373/String1.txt,"""SELECT Salt FROM users WHERE MID="" + mid"
+before_374/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID + ""= "" + search_id"
+before_375/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_QUOTA + "" = "" + quota"
+before_377/String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_QUOTA + "") values("" + quota + "")"""
+before_378/String1.txt,"""update "" + TBL_NAME + "" set "" + FIELD_QUOTA + ""="" + quota + "" where "" + FIELD_ID + ""="" + id_piano"
+before_379/String1.txt,"""delete from "" + TBL_NAME + "" where "" + FIELD_ID + ""="" + id_piano"
+before_381/String1.txt,"""DELETE FROM ingresso WHERE id="" + id"
+before_382/String1.txt,"""UPDATE ingresso SET local="" + pista.getLocal() + "", datahora="" + new java.sql.Date(pista.getDataHora().getTime()) + "", lugar="" + pista.getLugar() + "", quantidade="" + pista.getQuantidade() + "", idcategoria="" + pista.getCategoria().getId() + "", idtipoingresso="" + pista.getTipoIngresso().getId() + "", valor="" + pista.getValor() + "" WHERE id="" + pista.getId()"
+before_383/String1.txt,"""SELECT * FROM ingresso WHERE id="" + codigo"
+before_384/String1.txt,"""INSERT INTO `sis_pizza_db`.`pizza` (`numero_pizza`, `nome_pizza`, `tipo_pizza`, `tipo_massa`, `ingredientes_pizza`, `preco_pizza`)"" + ""VALUES ("" + pizza.getNumero() + "", "" + pizza.getNome() + "", "" + pizza.getTipoPizza() + "", "" + pizza.getTipoMassa() + "", "" + pizza.getIngredientes() + "", "" + pizza.getPreco() + "");"""
+before_385/String1.txt,"""UPDATE `sis_pizza_db`.`pizza` SET `nome_pizza` = "" + pizza.getNome() + "", `tipo_pizza` = "" + pizza.getTipoPizza() + "", `tipo_massa` = "" + pizza.getTipoMassa() + "", `ingredientes_pizza` = "" + pizza.getIngredientes() + "", `preco_pizza` = "" + pizza.getPreco() + ""WHERE `numero_pizza` = "" + pizza.getNumero() + "";"""
+before_386/String1.txt,"""DELETE FROM pizza WHERE numero_pizza = "" + pizza.getNumero() + "";"""
+before_387/String1.txt,"""Select product_price from product_sms where product_id = "" + order.getItemName()"
+before_388/String1.txt,"""Select product_stock from product_sms where product_id = "" + order.getItemName()"
+before_389/String1.txt,"""SELECT * FROM tblauthor WHERE author_name = '"" + name + ""'"""
+before_39/String1.txt,"""SELECT * FROM ITEM WHERE ITEM_NAME LIKE '"" + input + ""';"""
+before_390/String1.txt,"""SELECT * FROM tblauthor WHERE id = "" + id"
+before_391/String1.txt,"""SELECT last_insert_rowid()"""
+before_392/String1.txt,"""INSERT INTO tblauthor(author_name, gender, description) VALUES("" + author.getAuthorName() + "", "" + author.getGender() + "", "" + author.getDescription() + "")"""
+before_393/String1.txt,"""UPDATE tblauthor SET author_name = "" + author.getAuthorName() + "", gender = "" + author.getGender() + "", description = "" + author.getDescription() + "" WHERE id = "" + author.getId()"
+before_394/String1.txt,"""insert into nba.players(name,number,position,height,weight,birth,age,exp,school,actionimgpath,portraitimgpath)values("" + player.getName() + "","" + player.getNumber() + "","" + player.getPosition() + "","" + player.getHeight() + "","" + player.getWeight() + "","" + player.getBirth() + "","" + player.getAge() + "","" + player.getExp() + "","" + player.getSchool() + "","" + player.getActionImgPath() + "","" + player.getPortraitImgPath() + "")"""
+before_395/String1.txt,"""delete from nba.players where name="" + name"
+before_396/String1.txt,"""select name,number,position,height,weight,birth,age,exp,school,actionimgpath,portraitimgpath,seasonsp from nba.players where name="" + name"
+before_397/String1.txt,"""update nba.players set currentteam="" + teamAbbr + "" where name="" + playerName"
+before_398/String1.txt,"""SELECT last_insert_rowid()"""
+before_399/String1.txt,"""INSERT INTO Employee(personId, salary) VALUES ('"" + employeeObj.getId() + ""','"" + employeeObj.getSalary() + ""')"""
+before_4/String1.txt,"""Insert into State_de_Functii values("" + state.getIdCadruDidactic() + "","" + state.getIdDisciplina() + "","" + state.getIdSectia() + "","" + state.getAn() + "","" + state.getOreC1() + "","" + state.getOreS1() + "","" + state.getOreL1() + "","" + state.getOreC2() + "","" + state.getOreS2() + "","" + state.getOreL2() + "")"""
+before_400/String1.txt,"""DELETE FROM Posizione WHERE etichetta = "" + posizione.getEtichetta() + "" AND isil = "" + posizione.getBiblioteca().getIsil()"
+before_401/String1.txt,"""select * from pinnedposts where postid = "" + count"
+before_402/String1.txt,"""select count(*) from normalposts where authorid = "" + userid"
+before_403/String1.txt,"""select * from normalposts where authorid = "" + userid"
+before_405/String1.txt,"new StringBuilder(""SELECT * FROM "").append(tableName).append("" WHERE id = "" + postId).toString()"
+before_407/String1.txt,"""UPDATE Employee SET "" + ""salary= '"" + employeeNewObj.getSalary() + ""' "" + ""WHERE personId= '"" + employeeNewObj.getId() + ""'"""
+before_409/String1.txt,"new StringBuilder(""UPDATE "").append(tableName).append("" SET message = "" + message + "" WHERE id = "" + postId).toString()"
+before_41/String1.txt,"""SELECT player FROM stats WHERE player = '"" + p.getUniqueId().toString() + ""'"""
+before_410/String1.txt,"new StringBuilder(""UPDATE "").append(tableName).append("" SET "").append(column).append("" = "").append(column).append("" + 1, points = points + "").append(Integer.toString(vote)).append("" WHERE id = "" + postId).toString()"
+before_411/String1.txt,"""select * from shares where our_result='Y' order by time desc limit "" + Math.round(network_diff / 32.0)"
+before_412/String1.txt,"""insert into candidates (first_name,last_name,dob,phone,email) values (hina ,nair ,1993-02-09 ,1234567890 ,hine@gmail)"""
+before_413/String1.txt,"""insert into inception_preference ( userId, musicId ) values ("" + userId + "", "" + musicId + "");"""
+before_414/String1.txt,"""delete from inception_preference where id = "" + id"
+before_415/String1.txt,"""select * from inception_preference where userId = "" + userId + "" and musicId = "" + musicId"
+before_417/String1.txt,"""select * from inception_preference where userId = "" + userId + "" order by id desc limit "" + start + "", "" + count"
+before_418/String1.txt,"""delete from inception_preference where userId = "" + userId + "" and musicId = "" + musicId"
+before_419/String1.txt,"""select COUNT(*) from inception_preference where userId = "" + i"
+before_42/String1.txt,"""INSERT INTO `stats` (`player`, `kills`, `deaths`) VALUES ('"" + p.getUniqueId().toString() + ""', '0', '0')"""
+before_420/String1.txt,"""select * from inception_preference, inception_music where inception_preference.userId = "" + id + "" and inception_preference.musicId = inception_music.id"""
+before_421/String1.txt,"""INSERT INTO testincrement VALUES()"""
+before_422/String1.txt,"""INSERT INTO testincrement VALUES()"""
+before_423/String1.txt,"""DELETE FROM Prenotazione WHERE id = '"" + i + ""'"""
+before_424/String1.txt,"""DELETE FROM Employee WHERE personId= '"" + id + ""'"""
+before_425/String1.txt,"""DELETE FROM Facility WHERE id= '"" + id + ""'"""
+before_426/String1.txt,"""SELECT COUNT(*) AS facilityInstances FROM Facility "" + "" WHERE id<> '"" + id + ""' AND name= '"" + name + ""'"""
+before_427/String1.txt,"""DELETE FROM Guest WHERE personId= '"" + guestId + ""'"""
+before_428/String1.txt,"""INSERT INTO course(courname,faculty) VALUES ("" + courname + "","" + facultyCourTextBox.getText() + "")"""
+before_43/String1.txt,"""SELECT kills FROM stats WHERE player = '"" + p.getUniqueId().toString() + ""'"""
+before_431/String1.txt,"""DELETE FROM Instructor WHERE employeeId= '"" + employeeId + ""'"""
+before_432/String1.txt,"""CREATE TABLE country ("" + "" id INTEGER PRIMARY KEY AUTO_INCREMENT,"" + "" country_code CHAR(5) NOT NULL,"" + "" country_name VARCHAR(255) NOT NULL,"" + "" has_division SMALLINT NOT NULL,"" + "" division_name VARCHAR(255)"" + "")"""
+before_433/String1.txt,"""CREATE TABLE region ("" + "" id INTEGER PRIMARY KEY AUTO_INCREMENT,"" + "" country INTEGER	NOT NULL,"" + "" region_name VARCHAR(255)"" + "")"""
+before_434/String1.txt,"""DELETE FROM course WHERE idcourse = "" + curCour.getId()"
+before_435/String1.txt,"""INSERT INTO Location(zipcode, country, city) VALUES('"" + loc.getZipCode() + ""','"" + loc.getCountry() + ""','"" + loc.getCity() + ""')"""
+before_436/String1.txt,"""UPDATE Location SET "" + ""zipCode= '"" + loc.getZipCode() + ""', "" + ""city= '"" + loc.getCity() + ""' "" + ""WHERE country= '"" + loc.getCountry() + ""'"""
+before_437/String1.txt,"""DELETE FROM Location WHERE zipCode= '"" + zipcode + ""' AND country= '"" + country + ""'"""
+before_438/String1.txt,"""INSERT INTO instructor(fname,lname,faculty,email,password)  VALUES ("" + firstNameTextBox.getText() + "","" + lastNameTextBox.getText() + "","" + facultyInstrTextBox.getText() + "","" + emailTextBox.getText() + "","" + BCrypt.hashpw(passBox.getText(), BCrypt.gensalt()) + "")"""
+before_439/String1.txt,"""SELECT U.FIRSTNAME, U.LASTNAME, COUNT(*) AS POSTS_COUNT\n"" + ""FROM POSTS P, USERS U\n"" + ""WHERE U.ID = P.USER_ID\n"" + ""GROUP BY USER_ID\n"" + ""HAVING COUNT(*) >= 2;"""
+before_44/String1.txt,"""SELECT death FROM stats WHERE player = '"" + p.getUniqueId().toString() + ""'"""
+before_440/String1.txt,"""DELETE FROM instructor WHERE idinstructor = "" + curInstr.getInstrId()"
+before_441/String1.txt,stringBuilder1.toString()
+before_442/String1.txt,stringBuilder1.toString()
+before_443/String1.txt,stringBuilder1.toString()
+before_444/String1.txt,"""UPDATE Person SET "" + ""name='"" + prs.getName() + ""', "" + ""zipcode='"" + prs.getZipcode() + ""', "" + ""country='"" + prs.getCountry() + ""', "" + ""address='"" + prs.getAddress() + ""', "" + ""phoneNo='"" + prs.getPhoneNo() + ""', "" + ""email='"" + prs.getEmail() + ""', "" + ""personType='"" + prs.getPersonType() + ""', "" + ""password='"" + prs.getPassword() + ""' "" + ""WHERE id='"" + prs.getId() + ""'"""
+before_445/String1.txt,"""DELETE FROM Person WHERE id= '"" + prsId + ""'"""
+before_446/String1.txt,"""SELECT COUNT(*) AS personInstances FROM Person "" + "" WHERE id<> '"" + id + ""' AND name= '"" + name + ""' AND zipcode= '"" + zipcode + ""' AND country= '"" + country + ""' AND address= '"" + address + ""'"""
+before_447/String1.txt,"""INSERT INTO Room(number, roomType)"" + "" VALUES('"" + room.getNumber() + ""','"" + room.getRoomType().getCategory() + ""')"""
+before_448/String1.txt,"""DELETE FROM Room WHERE number="" + number"
+before_449/String1.txt,"""UPDATE Room SET "" + ""roomType='"" + r.getRoomType().getCategory() + ""' "" + ""WHERE number='"" + r.getNumber() + ""'"""
+before_450/String1.txt,"""INSERT INTO RoomBooking(arrivalDate, departureDate, stts, numberOfChildren)"" + "" VALUES('"" + rb.getArrivalDate() + ""','"" + rb.getDepartureDate() + ""','"" + rb.getStatus() + ""','"" + rb.getNumberOfChildren() + ""')"""
+before_451/String1.txt,"""UPDATE RoomBooking SET "" + ""arrivalDate='"" + roomBooking.getArrivalDate() + ""', "" + ""departureDate='"" + roomBooking.getDepartureDate() + ""', "" + ""stts='"" + roomBooking.getStatus() + ""', "" + ""numberOfChildren='"" + roomBooking.getNumberOfChildren() + ""' "" + ""WHERE id='"" + roomBooking.getId() + ""'"""
+before_452/String1.txt,"""DELETE FROM RoomBooking WHERE id = '"" + roomBookingId + ""'"""
+before_453/String1.txt,"""INSERT INTO RoomLine(guestId, roomNo, booking) VALUES('"" + roomLine.getGuest().getId() + ""', '"" + roomLine.getRoom().getNumber() + ""', '"" + roomLine.getBooking().getId() + ""')"""
+before_454/String1.txt,"""DELETE FROM RoomLine WHERE guestId="" + guestId + "" AND roomNo="" + roomNo + "" AND booking="" + booking"
+before_455/String1.txt,"""INSERT INTO RoomType(category, typeDescription, price)"" + "" VALUES('"" + rt.getCategory() + ""','"" + rt.getDescription() + ""','"" + rt.getPrice() + ""')"""
+before_456/String1.txt,"""DELETE FROM RoomType WHERE category='"" + category + ""'"""
+before_457/String1.txt,"""UPDATE RoomType SET "" + ""typeDescription='"" + rt.getDescription() + ""', "" + ""price="" + rt.getPrice() + "" WHERE category='"" + rt.getCategory() + ""'"""
+before_458/String1.txt,"""INSERT INTO Team(teamId, leaderId, numberOfParticipants) VALUES ('"" + nextTeamId + ""','"" + guestObj.getId() + ""','"" + team.getNumberOfParticipants() + ""') INSERT INTO TeamParticipants(teamId, participantId) VALUES ('"" + nextTeamId + ""','"" + guestObj.getId() + ""')"""
+before_459/String1.txt,"""UPDATE Team SET leaderId= '"" + guestObj.getId() + ""', "" + ""numberOfParticipants= '"" + teamObj.getNumberOfParticipants() + ""' "" + ""WHERE teamId= '"" + teamObj.getId() + ""'"""
+before_46/String1.txt,"""SELECT * FROM ITEM WHERE ITEM_NAME LIKE '"" + item_name + ""';"""
+before_460/String1.txt,"""DELETE FROM Team WHERE leaderId= '"" + leaderId + ""'"""
+before_461/String1.txt,"""DELETE FROM Team WHERE teamId= '"" + id + ""'"""
+before_462/String1.txt,"""DELETE FROM Team WHERE teamId= '"" + teamId + ""' AND leaderId= '"" + leaderId + ""'"""
+before_463/String1.txt,"""INSERT INTO TeamParticipants(teamId, participantId) VALUES ('"" + teamParticipant.getTeam().getId() + ""','"" + teamParticipant.getGuest().getId() + ""')"""
+before_464/String1.txt,"""DELETE FROM TeamParticipants WHERE teamId= '"" + teamId + ""'"" + "" AND participantId= '"" + participantId + ""'"""
+before_465/String1.txt,"""DELETE FROM TeamParticipants WHERE teamId= '"" + teamId + ""'"""
+before_466/String1.txt,"""SELECT COUNT(*) AS teamParticipantInstances FROM TeamParticipants "" + "" WHERE teamId='"" + teamId + ""' AND participantId='"" + participantId + ""'"""
+before_467/String1.txt,"""INSERT INTO TravelAgency(cvr, name, zipcode, country, address, phoneNo, email) VALUES('"" + travelAgency.getCVR() + ""','"" + travelAgency.getName() + ""','"" + travelAgency.getZipCode() + ""','"" + travelAgency.getCountry() + ""','"" + travelAgency.getAddress() + ""','"" + travelAgency.getPhoneNo() + ""','"" + travelAgency.getEmail() + ""')"""
+before_468/String1.txt,"""UPDATE TravelAgency SET "" + ""name='"" + travelAgencytravelAgency.getName() + ""', "" + ""zipcode='"" + travelAgencytravelAgency.getZipCode() + ""', "" + ""country='"" + travelAgencytravelAgency.getCountry() + ""', "" + ""address='"" + travelAgencytravelAgency.getAddress() + ""', "" + ""phoneNo='"" + travelAgencytravelAgency.getPhoneNo() + ""', "" + ""email='"" + travelAgencytravelAgency.getEmail() + ""' "" + ""WHERE cvr='"" + travelAgencytravelAgency.getCVR() + ""'"""
+before_469/String1.txt,"""DELETE FROM TravelAgency WHERE cvr= '"" + cvr + ""'"""
+before_470/String1.txt,"""UPDATE instructor SET admin = "" + curAdmin + "" WHERE idinstructor"" + "" = "" + selInstr.getInstrId() + "";"""
+before_471/String1.txt,"""DELETE FROM TravelAgency WHERE name= '"" + name + ""'"""
+before_472/String1.txt,"""SELECT COUNT(*) AS travelAgencyInstances FROM TravelAgency "" + "" WHERE cvr<> '"" + cvr + ""' AND name= '"" + name + ""' AND zipcode= '"" + zipcode + ""' AND country= '"" + country + ""' AND address= '"" + address + ""'"""
+before_473/String1.txt,"""INSERT INTO Agence (codeAgence, nomAgence) VALUES ("" + obj.getCodeAgence() + "", "" + obj.getNomAgence() + "")"""
+before_474/String1.txt,"""DELETE FROM Agence WHERE id = "" + obj.getId()"
+before_475/String1.txt,"""UPDATE Agence SET codeAgence = "" + obj.getCodeAgence() + "", nomAgence = "" + obj.getNomAgence() + "" WHERE id = "" + obj.getId()"
+before_476/String1.txt,"""SELECT * FROM Agence WHERE id = "" + id"
+before_477/String1.txt,"""SELECT * FROM Agence WHERE codeAgence = "" + code"
+before_478/String1.txt,"""Select * from Members a "" + "" where a.User_Name = "" + userName"
+before_479/String1.txt,"""Select *  from Starwood a "" + "" where a.User_Name = "" + userName"
+before_48/String1.txt,"""SELECT * FROM ITEM WHERE DEPARTMENT LIKE 'ELECTRONICS';"""
+before_480/String1.txt,"""Insert into Guest(Id,Guest_Name, Guest_Surname, Address, Email_Address, Card_Number, Phone_Number,ExpiryDate,CVV) values("" + GuestID.toString() + "","" + guest.getGuestName() + "","" + guest.getGuestSurename() + "","" + guest.getGuestAddress() + "","" + guest.getGuestEmail() + "","" + guest.getGuestCardNumber() + "","" + guest.getGuestPhoneNumber() + "","" + guest.getExpiryDate() + "","" + guest.getCVV() + "")"""
+before_481/String1.txt,"""Insert into Reservations(GuestID, start, end, numberRooms) values ("" + GuestID + "", "" + start + "", "" + end + "", "" + numberRooms + "")"""
+before_482/String1.txt,"""Insert into Starwood(Member_Name, Member_Surname, Address, Email_Address, Card_Number, Phone_Number, User_Name) values ("" + member.getName() + "","" + member.getSurename() + "","" + member.getAddress() + "","" + member.getEmail() + "","" + member.getCardNumber() + "","" + member.getPhoneNumber() + "","" + member.getUserName() + "")"""
+before_484/String1.txt,"""Delete From Credit_Card where MemberID = "" + id.toString()"
+before_485/String1.txt,"""Select *  from Credit_Card a where a.MemberID = "" + id.toString()"
+before_486/String1.txt,"""Select *  from Credit_Card a where a.MemberID = "" + id.toString()"
+before_487/String1.txt,"""Select *  from Reserved_Rooms a where a.reservationID = "" + reservationId.toString()"
+before_488/String1.txt,"""Update Starwood set Member_Name ="" + member.getName() + ""  where Id="" + member.getId().toString()"
+before_489/String1.txt,"""Update Starwood set Member_Surname = "" + member.getSurename() + ""  where Id= "" + member.getId().toString()"
+before_49/String1.txt,"""SELECT * "" + ""FROM evolutionary_distance "" + ""WHERE organism_1 like '"" + organismName + ""' OR organism_2 like '"" + organismName + ""' ORDER BY CAST(evolutionary_distance AS float)  "" + "" LIMIT "" + top"
+before_490/String1.txt,"""Update Starwood set Address ="" + member.getAddress() + ""  where Id="" + member.getId().toString()"
+before_491/String1.txt,"""Update Starwood set Email_Address ="" + member.getEmail() + ""  where Id="" + member.getId().toString()"
+before_492/String1.txt,"""Update Starwood set Phone_Number ="" + member.getPhoneNumber() + ""  where Id="" + member.getId().toString()"
+before_495/String1.txt,"""Update Members set User_Password ="" + member.getPassword() + "" where User_Name="" + member.getUserName()"
+before_496/String1.txt,"""Insert into Credit_Card(MemberID, Card_Number,ExpiryDate, CVV) values ("" + card.getId().toString() + "","" + card.getCardNumber() + "","" + card.getExpiryDate() + "","" + card.getCVV() + "")"""
+before_497/String1.txt,"""select * from agent_details where agn_id="" + user + "" and password="" + pass + "" and approval="" + str + "" """
+before_499/String1.txt,"""Insert into Guest(Guest_Name, Guest_Surname, Address, Email_Address, Card_Number, Phone_Number,ExpiryDate,CVV) values ("" + guest.getGuestName() + "","" + guest.getGuestSurename() + "","" + guest.getGuestAddress() + "","" + guest.getGuestEmail() + "","" + guest.getGuestCardNumber() + "","" + guest.getGuestPhoneNumber() + "","" + guest.getExpiryDate() + "","" + guest.getCVV() + "")"""
+before_5/String1.txt,"""Delete from Cadre_Didactice where id_Cadru_Didactic = "" + id_Cadru_Didactic"
+before_501/String1.txt,"""Select *  from Starwood a "" + "" where a.id = "" + id.toString()"
+before_502/String1.txt,"""Select Id  from Starwood a "" + "" where a.User_name = "" + userName"
+before_503/String1.txt,"""Insert into Members(User_Name, User_Password) values ("" + member.getUserName() + "","" + member.getPassword() + "")"""
+before_504/String1.txt,"""Select a.Reservation_Id, a.GuestID, a.start, a.end, a.duration, a.numberRooms, a.bookingDate, a.status, a.reservationType, a.price from Reservations a WHERE a.Reservation_Id = "" + Reservation_Id.toString() + "" and a.reservationType = 'Guest' """
+before_505/String1.txt,"""Select a.Reservation_Id, a.GuestID, a.start, a.end, a.numberRooms, a.bookingDate, a.status, a.reservationType, a.price from Reservations a where a.GuestID = "" + GuestID.toString()"
+before_511/String1.txt,"""Insert into Reserved_Rooms(roomNumber, reservationID ) values ("" + roomNumber + "", "" + reservationID.toString() + "")"""
+before_514/String1.txt,"""SELECT Room_Number, price FROM Room WHERE Room_Number = "" + roomNumber"
+before_515/String1.txt,"""select count(*) from agent_details where location="" + location"
+before_517/String1.txt,"""UPDATE CADASTROAGRICULTOR SET NOME="" + agricultor.getNome() + "", DATA_CADASTRO="" + new java.sql.Date(agricultor.getData_cadastro().getTime()) + "", MUNICIPIO="" + agricultor.getMunicipio() + "", LOCALIDADE="" + agricultor.getLocalidade() + "", PRODUTOS="" + agricultor.getProdutos() + "", STATUS="" + agricultor.getStatus() + "", TELEFONE="" + agricultor.getTelefone() + "" WHERE ID_AGRICULTOR=?"""
+before_518/String1.txt,"""DELETE FROM CADASTROAGRICULTOR WHERE ID_AGRICULTOR = "" + agricultor.getId_agricultor()"
+before_519/String1.txt,"""delete from customers where customerNo="" + delInt"
+before_52/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID_PIANO + ""="" + search_id + "" order by "" + FIELD_NOME"
+before_520/String1.txt,"""SELECT * FROM instructor WHERE idinstructor != "" + instrId + "" ORDER BY lname"""
+before_521/String1.txt,"""delete from fuel_types where id="" + delInt"
+before_523/String1.txt,"""DELETE FROM Person WHERE name = "" + person.getName()"
+before_524/String1.txt,"driId + ""';"""
+before_525/String1.txt,"""delete from project_hrm where id='"" + id + ""'"""
+before_526/String1.txt,"""delete from items where id='"" + ID + ""'"""
+before_527/String1.txt,"""delete from user where id = "" + userid"
+before_528/String1.txt,"""update atm_user set state = 2 where account = '"" + del_Account + ""';"""
+before_53/String1.txt,"""SELECT * FROM ITEM WHERE DEPARTMENT LIKE 'Clothes';"""
+before_531/String1.txt,"""INSERT INTO CUSTOMER(NAME,MOBILE_NUMBER) VALUES("" + customerAddRequest.getMobileNumber() + "","" + customerAddRequest.getName() + "")"""
+before_532/String1.txt,"""SELECT * FROM CUSTOMER WHERE CUSTOMER_ID="" + customerFetchParams.getCustomerId()"
+before_533/String1.txt,"""SELECT FIRST_NAME,LAST_NAME FROM CUSTOMER WHERE EMAIL = '"" + Login.sendUsername() + ""'"""
+before_534/String1.txt,"""SELECT PHONE FROM CUSTOMER WHERE EMAIL = '"" + Login.sendUsername() + ""'"""
+before_535/String1.txt,"""SELECT ADDRESS FROM CUSTOMER WHERE EMAIL = '"" + Login.sendUsername() + ""'"""
+before_537/String1.txt,"""INSERT INTO Usuarios"" + ""(nome,Login,senha,email) values("" + pessoa.getNome() + "","" + pessoa.getLogin() + "","" + pessoa.getSenha() + "","" + pessoa.getEmail() + "")"""
+before_538/String1.txt,"""UPDATE Usuarios SET "" + ""nome="" + pessoa.getNome() + "",login="" + pessoa.getLogin() + "",senha="" + pessoa.getSenha() + "",email="" + pessoa.getEmail() + ""+WHERE id="" + pessoa.getId()"
+before_539/String1.txt,"""DELETE FROM Usuarios WHERE id="" + id"
+before_54/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_ID + ""="" + search_id"
+before_540/String1.txt,"""SELECT * FROM usuarios where Login="" + pessoa.getLogin() + "" and senha="" + pessoa.getSenha()"
+before_542/String1.txt,"""SELECT usuario, contrasena FROM Administradores WHERE usuario = '"" + user + ""';"""
+before_543/String1.txt,"""SELECT cedula_ge, contrasena FROM Gerentes WHERE cedula_ge = '"" + user + ""';"""
+before_544/String1.txt,"""SELECT * FROM Notas where usuario_abriu="" + id1"
+before_545/String1.txt,"""INSERT INTO Notas"" + ""(aberta,usuario_abriu,titulo,texto,cor,prazo_final_nota,data_criacao) values("" + nota.getAberta() + "","" + nota.getUsuario_abriu() + "","" + nota.getTitulo() + "","" + nota.getTexto() + "","" + nota.getCor() + "","" + new Date(nota.getPrazo_final().getTimeInMillis()) + "","" + new Date(nota.getData_criacao().getTimeInMillis()) + "")"""
+before_546/String1.txt,"""UPDATE Notas SET "" + ""aberta="" + nota.getAberta() + "",titulo="" + nota.getTitulo() + "", texto="" + nota.getTexto() + "", cor="" + nota.getCor() + "",prazo_final_nota="" + new Date(nota.getPrazo_final().getTimeInMillis()) + "" WHERE id="" + nota.getId()"
+before_547/String1.txt,"""DELETE FROM Notas WHERE id="" + id"
+before_548/String1.txt,"""SELECT cedula_op, contrasena FROM Operadores WHERE cedula_op = '"" + user + ""';"""
+before_549/String1.txt,"""select aoc from VARIETE where libelle='"" + libelle + ""';"""
+before_55/String1.txt,"""select * from "" + TBL_NAME + "" where "" + FIELD_NOME + ""="" + search_nome"
+before_550/String1.txt,"""INSERT INTO VARIETE VALUES ('"" + variete.getLibelle() + ""',"" + aoc + "") ;"""
+before_551/String1.txt,"""UPDATE VARIETE SET aoc = "" + aoc + "" where libelle = '"" + variete.getLibelle() + ""' ;"""
+before_552/String1.txt,"""DELETE FROM VARIETE where libelle ='"" + libelle + ""';"""
+before_555/String1.txt,"""INSERT INTO COUNTRY VALUES ("" + country.getCountry_id() + "","" + country.getCountry() + "","" + new java.sql.Timestamp(new Date().getTime()) + "")"""
+before_557/String1.txt,"""insert into practica7.PRESTEC values (DEFAULT, "" + ID_Bibliotecari + "", "" + ID_Soci + "", "" + ID_Copia + "", now(), NULL)"""
+before_56/String1.txt,"""insert into "" + TBL_NAME + "" ("" + FIELD_NOME + "","" + FIELD_ID_PIANO + "") values("" + mappa.getNome() + "","" + mappa.getID_piano() + "")"""
+before_560/String1.txt,"""UPDATE COUNTRY SET COUNTRY="" + country.getCountry() + "", LAST_UPDATE="" + country.getCountry() + ""WHERE COUNTRY_ID="" + new java.sql.Timestamp(new Date().getTime())"
+before_561/String1.txt,"""Insert into orar values("" + orar.getZiua() + "","" + orar.getOra_inceput() + "","" + orar.getOra_sfarsit() + "","" + orar.getFrecventa() + "","" + orar.getId_Disciplina() + "","" + orar.getTip() + "","" + orar.getId_Cadru_Didactic()"
+before_563/String1.txt,"""INSERT INTO "" + ((res instanceof Sala) ? "" TaskLogisticRoom "" : ""TaskLogisticEquipment"") + "" VALUES ("" + t.getId() + "","" + res.getId() + "")"""
+before_564/String1.txt,"""INSERT INTO TaskBudget VALUES ("" + t.getId() + "","" + tip + "","" + res.getSuma() + "","" + res.getDescriere() + "")"""
+before_565/String1.txt,"""INSERT INTO TaskTeam VALUES ("" + t.getId() + "","" + cd.getId() + "")"""
+before_567/String1.txt,"""SELECT PHONE FROM CUSTOMER WHERE EMAIL = '"" + Login.sendUsername() + ""'"""
+before_568/String1.txt,"""INSERT INTO CercuriStudentesti VALUES("" + cerc.getId() + "","" + cerc.getDenumire() + "","" + cerc.getMentor() + "","" + cerc.getAn() + "","" + cerc.getDescriere() + "",0)"""
+before_569/String1.txt,"""SELECT * FROM ProgrameDeStudiu WHERE sectie_id = "" + sectie.getId()"
+before_57/String1.txt,"""update "" + TBL_NAME + "" set "" + FIELD_NOME + ""="" + mappa.getNome() + ""where "" + FIELD_ID + ""="" + id_mappa"
+before_570/String1.txt,"""SELECT * FROM PlanuriInvatamint WHERE program_id = "" + plan.getId()"
+before_572/String1.txt,"""INSERT INTO ProgrameDeStudiu VALUES ("" + sectie.getId() + "","" + plan.getDenumire() + "","" + plan.getSemestru() + "")"""
+before_574/String1.txt,"""DELETE FROM Sectii WHERE Id_Sectie = "" + sectie.getId()"
+before_576/String1.txt,"""SELECT ADDRESS FROM CUSTOMER WHERE EMAIL = '"" + Login.sendUsername() + ""'"""
+before_577/String1.txt,"""INSERT INTO Album VALUES("" + album.getIdSpotify() + "", null);"""
+before_578/String1.txt,"""SELECT * FROM Album WHERE id_album="" + id + "";"""
+before_579/String1.txt,"""SELECT * FROM Album WHERE id_spotify="" + idSpotify + "";"""
+before_58/String1.txt,"""delete from "" + TBL_NAME + "" where "" + FIELD_ID + ""="" + id_mappa"
+before_580/String1.txt,"""Select UserId, `Name`, a.Id as aId, i.Id, `Hash`, `Image`, `Album`, `CreatedIn` From `ALBUM` as a "" + ""INNER JOIN `IMAGE` as i on i.Album = a.Id"" + "" Where `UserId` = "" + userId + "" Group by `Name`, i.`Id`, `Album`"""
+before_582/String1.txt,"""INSERT INTO Album_Lista VALUES(null, "" + albumLista.getAlbum().getIdAlbum() + "", "" + albumLista.getLista().getIdLista() + "");"""
+before_583/String1.txt,"""DELETE FROM Album_Lista WHERE id_album_lista="" + id + "";"""
+before_584/String1.txt,"""SELECT * FROM Album_Lista "" + ""INNER JOIN Lista ON Album_Lista.id_lista = Lista.id_lista "" + ""INNER JOIN Usuario ON Lista.id_usuario = Usuario.id_usuario "" + ""INNER JOIN Album ON Album.id_album = Album_Lista.id_album "" + ""WHERE Album_Lista.id_lista="" + id + "";"""
+before_585/String1.txt,"""SELECT sensor_type, comparator, comparison_value FROM alerts WHERE node_id = "" + node + "" AND sensor_type = "" + sensorType + "";"""
+before_586/String1.txt,"""INSERT INTO alerts (sensor_type, comparator, comparison_value, node_id) VALUES ("" + sensorType + "", "" + comparator + "", "" + compValue + "", "" + node + "");"""
+before_587/String1.txt,"""DELETE FROM alerts WHERE id = "" + id + "";"""
+before_589/String1.txt,"""DELETE FROM ingresso WHERE id="" + id"
+before_59/String1.txt,"""SELECT map FROM maps WHERE map = '"" + name + ""'"""
+before_591/String1.txt,"""SELECT * FROM ingresso WHERE id="" + codigo"
+before_592/String1.txt,"""INSERT INTO T_HT_ALIMENTACAO (CD_ALIMENTO, DS_ALIMENTO, CD_USUARIO, VL_CALORIAS_GANHAS, DT_REGISTRO) VALUES (SQ_T_HT_ALIMENTACAO.NEXTVAL, "" + alimentacao.getDs_alimento() + "", "" + alimentacao.getCd_usuario() + "", "" + alimentacao.getVl_calorias_ganhas() + "", "" + data + "")"""
+before_593/String1.txt,"""UPDATE T_HT_ALIMENTACAO SET CD_ALIMENTO = "" + alimentacao.getCd_alimento() + "", DS_ALIMENTO = "" + alimentacao.getDs_alimento() + "", CD_USUARIO = "" + alimentacao.getCd_usuario() + "", VL_CALORIAS_GANHAS ="" + alimentacao.getVl_calorias_ganhas() + "", DT_REGISTRO = "" + data + "" WHERE CD_ALIMENTO = "" + alimentacao.getCd_alimento()"
+before_594/String1.txt,"""DELETE FROM T_HT_ALIMENTACAO WHERE CD_ALIMENTO = "" + cd_alimento"
+before_595/String1.txt,"""SELECT * FROM T_HT_ALIMENTACAO WHERE CD_ALIMENTO = "" + codigoBusca"
+before_596/String1.txt,"""SELECT * FROM allergies WHERE PatientID="" + pid + "" ORDER BY FirstFound DESC"""
+before_598/String1.txt,"""SELECT * FROM druginteractions WHERE FirstDrug = "" + drugCode + "" OR SecondDrug = "" + drugCode"
+before_599/String1.txt,"""INSERT INTO druginteractions (FirstDrug, SecondDrug, Description) "" + ""VALUES ("" + firstDrug + "","" + secondDrug + "","" + description + "")"""
+before_6/String1.txt,"""UPDATE Cadre_Didactice  SET "" + ""pozitia = "" + cd.getPozitia() + "", den_post = "" + cd.getDenumirePost() + "", nume = "" + cd.getNume() + "", functia= "" + cd.getFunctia() + "" , tit_vac = "" + cd.getTitVac() + ""  WHERE Id_Cadru_Didactic= "" + cd.getId()"
+before_60/String1.txt,"""INSERT INTO maps VALUES ('"" + name + ""')"""
+before_600/String1.txt,"""DELETE FROM druginteractions WHERE (FirstDrug = "" + firstDrug + "" OR SecondDrug = "" + firstDrug + "") AND (FirstDrug = "" + secondDrug + "" OR SecondDrug = "" + secondDrug + "")"""
+before_601/String1.txt,"""SELECT * FROM drugreactionoverridecodes WHERE Code = "" + code"
+before_603/String1.txt,"""UPDATE drugreactionoverridecodes SET Description = "" + orc.getDescription() + "" "" + ""WHERE Code = "" + orc.getORCode()"
+before_604/String1.txt,"""INSERT INTO localdb.sys_network.repositories (repo_url) "" + ""VALUES ("" + repoUrl + "")"""
+before_605/String1.txt,"""DELETE FROM localdb.sys_network.repositories WHERE "" + ""repo_url = "" + repoUrl"
+before_606/String1.txt,"""SELECT name FROM localdb.sys_root.dba_jars WHERE "" + ""name = "" + name + "" AND url IN ("" + fn + "","" + ""file:"" + fn + "")"""
+before_607/String1.txt,"""select ts.nama_studio as nama_studio from tb_studio ts, tb_jadwal tj\n"" + ""where ts.id_studio=tj.id_studio and\n"" + ""tj.id_jadwal="" + ""'"" + idJadwal + ""';"""
+before_608/String1.txt,"""INSERT INTO Usuarios"" + ""(nome,Login,senha,email) values("" + pessoa.getNome() + "","" + pessoa.getLogin() + "","" + pessoa.getSenha() + "","" + pessoa.getEmail() + "")"""
+before_609/String1.txt,"""INSERT INTO EDITORA VALUES ("" + editora.getEditora_id + "", "" + editora.getNome() + "", "" + editora.getMunicipio() + "")"""
+before_61/String1.txt,"""SELECT * FROM ITEM WHERE DEPARTMENT LIKE 'furniture';"""
+before_610/String1.txt,"""UPDATE EDITORA SET NOME="" + editora.getMunicipio() + "", MUNICIPIO="" + editora.getNome() + "" WHERE EDITORA_ID="" + editora.getEditora_id()"
+before_611/String1.txt,"""DELETE FROM EDITORA WHERE EDITORA_ID = "" + editora.getEditora_id()"
+before_612/String1.txt,"""UPDATE Usuarios SET "" + ""nome="" + pessoa.getNome() + "",login="" + pessoa.getLogin() + "",senha="" + pessoa.getSenha() + "",email="" + pessoa.getEmail() + ""+WHERE id="" + pessoa.getId()"
+before_613/String1.txt,"""INSERT INTO autot VALUES("" + rekno + "","" + merkki + "","" + malli + "","" + vuosi + "")"""
+before_614/String1.txt,"""UPDATE autot SET merkki="" + rekno + "", malli="" + merkki + "" vuosi="" + malli + "" WHERE rekno="" + vuosi"
+before_615/String1.txt,"""SELECT * FROM autot WHERE rekno="" + rekno"
+before_616/String1.txt,"""DELETE FROM Usuarios WHERE id="" + id"
+before_617/String1.txt,"""INSERT INTO tbl_emp(empno, ename, job, hiredate, sal) VALUES("" + emp.getEmpno() + "", "" + emp.getEname() + "", "" + emp.getJob() + "", "" + emp.getHiredate() + "" ,"" + emp.getSal() + "")"""
+before_618/String1.txt,"""DELETE FROM tbl_emp WHERE empno = "" + emp.getEmpno()"
+before_619/String1.txt,"""SELECT * FROM usuarios where Login="" + pessoa.getLogin() + "" and senha="" + pessoa.getSenha()"
+before_62/String1.txt,"""DELETE FROM marca WHERE Id = "" + _iId"
+before_620/String1.txt,"""UPDATE tbl_emp SET job = "" + emp.getJob() + "" WHERE empno = "" + emp.getEmpno()"
+before_621/String1.txt,"""delete from Employee where EMPID = "" + empId + "" """
+before_622/String1.txt,"""select * from Employee where EMPID = "" + empId"
+before_624/String1.txt,"""SELECT usuario, contrasena FROM Administradores WHERE usuario = '"" + user + ""';"""
+before_625/String1.txt,"""INSERT INTO EMPRESTIMO VALUES ("" + emprestimo.getEmprestimo_id() + "", "" + emprestimo.getLivro().getLivro_id() + "", "" + emprestimo.getEstudante().getEstudante_id() + "", "" + new java.sql.Date(emprestimo.getData_retirada().getTime()) + "", "" + new java.sql.Date(emprestimo.getData_devolucao().getTime()) + "", "" + new java.sql.Date(emprestimo.getData_entrega().getTime()) + "", "" + emprestimo.getStatus() + "")"""
+before_627/String1.txt,"""DELETE FROM EMPRESTIMO WHERE EMPRESTIMO_ID = "" + emprestimo.getEmprestimo_id()"
+before_628/String1.txt,"""SELECT EMPRESTIMO.*, LIVRO.LIVRO_ID, ESTUDANTE.ESTUDANTE_ID "" + ""FROM EMPRESTIMO "" + ""INNER JOIN LIVRO ON (LIVRO.LIVRO_ID = EMPRESTIMO.LIVRO_ID) "" + ""INNER JOIN ESTUDANTE ON (ESTUDANTE.ESTUDANTE_ID = EMPRESTIMO.ESTUDANTE_ID) "" + ""WHERE EMPRESTIMO_ID = ?"""
+before_629/String1.txt,"""Select * from tickets Where TicketNo ="" + ticketx.getText() + "";"""
+before_63/String1.txt,"""UPDATE marca "" + ""SET Nombre = "" + Data.String2Sql(_sNombre, true, false) + "", Id_Imagen = "" + _iId_Imagen + "" WHERE Id = "" + _iId"
+before_630/String1.txt,"""select * from "" + tableName + "" where 1<>1"""
+before_631/String1.txt,"""select column_name,data_type,column_comment from information_schema.columns where table_schema='"" + bi.getDatabase() + ""' and table_name='"" + bi.getTable() + ""'"""
+before_635/String1.txt,"""SELECT cedula_ge, contrasena FROM Gerentes WHERE cedula_ge = '"" + user + ""';"""
+before_636/String1.txt,"""SELECT * FROM Notas where usuario_abriu="" + id1"
+before_637/String1.txt,"""INSERT INTO Notas"" + ""(aberta,usuario_abriu,titulo,texto,cor,prazo_final_nota,data_criacao) values("" + nota.getAberta() + "","" + nota.getUsuario_abriu() + "","" + nota.getTitulo() + "","" + nota.getTexto() + "","" + nota.getCor() + "","" + new Date(nota.getPrazo_final().getTimeInMillis()) + "","" + new Date(nota.getData_criacao().getTimeInMillis()) + "")"""
+before_639/String1.txt,"""UPDATE Notas SET "" + ""aberta="" + nota.getAberta() + "",titulo="" + nota.getTitulo() + "", texto="" + nota.getTexto() + "", cor="" + nota.getCor() + "",prazo_final_nota="" + new Date(nota.getPrazo_final().getTimeInMillis()) + "" WHERE id="" + nota.getId()"
+before_64/String1.txt,"""SELECT Id FROM marca"" + Where(sNombre, iId_Imagen)"
+before_643/String1.txt,"""delete from "" + tableName + "" where id="" + id"
+before_644/String1.txt,"""DELETE FROM Notas WHERE id="" + id"
+before_646/String1.txt,"""INSERT INTO "" + currentTable + ""(id, joined, leaved)"" + "" VALUES("" + id + "", "" + joined + "", "" + leaved + "")"""
+before_647/String1.txt,"""SELECT cedula_op, contrasena FROM Operadores WHERE cedula_op = '"" + user + ""';"""
+before_648/String1.txt,"""INSERT INTO FamClient (codeFamClient, nomFamClient) VALUES ("" + obj.getCodeFamClient() + "", "" + obj.getNomFamClient() + "")"""
+before_649/String1.txt,"""DELETE FROM FamClient WHERE id = "" + obj.getId()"
+before_65/String1.txt,"""SELECT * FROM ITEM WHERE DEPARTMENT LIKE 'books';"""
+before_651/String1.txt,"""SELECT * FROM FamClient WHERE id = "" + id"
+before_652/String1.txt,"""SELECT * FROM FamClient WHERE codeFamClient = "" + code"
+before_653/String1.txt,"""select aoc from VARIETE where libelle='"" + libelle + ""';"""
+before_654/String1.txt,"""INSERT INTO VARIETE VALUES ('"" + variete.getLibelle() + ""',"" + aoc + "") ;"""
+before_655/String1.txt,"""UPDATE VARIETE SET aoc = "" + aoc + "" where libelle = '"" + variete.getLibelle() + ""' ;"""
+before_656/String1.txt,"""DELETE FROM VARIETE where libelle ='"" + libelle + ""';"""
+before_659/String1.txt,"""INSERT INTO COUNTRY VALUES ("" + country.getCountry_id() + "","" + country.getCountry() + "","" + new java.sql.Timestamp(new Date().getTime()) + "")"""
+before_661/String1.txt,"""insert into practica7.PRESTEC values (DEFAULT, "" + ID_Bibliotecari + "", "" + ID_Soci + "", "" + ID_Copia + "", now(), NULL)"""
+before_664/String1.txt,"""UPDATE COUNTRY SET COUNTRY="" + country.getCountry() + "", LAST_UPDATE="" + country.getCountry() + ""WHERE COUNTRY_ID="" + new java.sql.Timestamp(new Date().getTime())"
+before_665/String1.txt,"""Insert into orar values("" + orar.getZiua() + "","" + orar.getOra_inceput() + "","" + orar.getOra_sfarsit() + "","" + orar.getFrecventa() + "","" + orar.getId_Disciplina() + "","" + orar.getTip() + "","" + orar.getId_Cadru_Didactic()"
+before_667/String1.txt,"""select * from users where name='"" + data + ""'"""
+before_668/String1.txt,"""update users set hitcount=hitcount+1 where name='"" + names + ""'"""
+before_669/String1.txt,"""select name from users where id=0"""
+before_67/String1.txt,"""DELETE FROM ingresso WHERE id="" + id"
+before_68/String1.txt,"""UPDATE ingresso SET local="" + meia.getLocal() + "", datahora="" + new java.sql.Date(meia.getDataHora().getTime()) + "", lugar="" + meia.getLugar() + "", quantidade="" + meia.getQuantidade() + "", idcategoria="" + meia.getCategoria().getId() + "", idtipoingresso="" + meia.getTipoIngresso().getId() + "", valor="" + meia.getValor() + "" WHERE id="" + meia.getId()"
+before_69/String1.txt,"""SELECT * FROM ingresso WHERE id="" + codigo"
+before_7/String1.txt,"""Select * from User where email="" + forgotObj.getEmail() + ""and userName="" + forgotObj.getUserName()"
+before_70/String1.txt,"""SELECT * FROM ingresso WHERE id="" + codigo"
+before_71/String1.txt,"""SELECT * FROM member WHERE id = "" + strId"
+before_73/String1.txt,"""SELECT * FROM member WHERE id = "" + strId"
+before_74/String1.txt,"""INSERT INTO member (id, pwd, name, phone, email, address, e_key) VALUES ("" + m.getId() + "", "" + m.getPwd() + "", "" + m.getName() + "", "" + m.getPhone() + "", "" + m.getEmail() + "", "" + m.getAddress() + "", "" + m.getKey() + "")"""
+before_75/String1.txt,"""SELECT * FROM member WHERE id = "" + strId"
+before_76/String1.txt,"""SELECT id FROM member WHERE email="" + email"
+before_77/String1.txt,"""UPDATE member SET e_key="" + key + "" WHERE id="" + id"
+before_78/String1.txt,"""SELECT id FROM member WHERE e_key="" + key"
+before_79/String1.txt,"""SELECT pwd FROM member WHERE e_key="" + key"
+before_8/String1.txt,"""UPDATE User SET password="" + forgotObj.getPassword() + "" where userName="" + forgotObj.getUserName() + "" and email="" + forgotObj.getEmail()"
+before_80/String1.txt,"""UPDATE member SET pwd="" + m.getPwd() + "", name="" + m.getName() + "", phone="" + m.getPhone() + "", email="" + m.getEmail() + "", address="" + m.getAddress() + "" WHERE id = "" + m.getId()"
+before_81/String1.txt,"""UPDATE member "" + ""SET pwd='x', name='x', phone='010-0000-0000', address='x', "" + ""memo='x', rating=3, e_key='0' "" + ""WHERE id = "" + strId"
+before_82/String1.txt,"""INSERT INTO cart VALUES ("" + id + "", "" + b.getNo() + "", "" + b.getTitle() + "", "" + b.getPrice() + "", "" + count + "", "" + b.getImage() + "")"""
+before_83/String1.txt,"""SELECT * "" + ""FROM cart c, book b "" + ""WHERE c.no = b.no AND id = "" + id"
+before_84/String1.txt,"""DELETE FROM cart WHERE id="" + id + "" AND no="" + no"
+before_85/String1.txt,"""select * from "" + getParam().getTableName() + "" where key='"" + key + ""'"""
+before_86/String1.txt,"""UPDATE cart SET count="" + count + "" WHERE id="" + id + "" AND no="" + no"
+before_87/String1.txt,"""SELECT * FROM cart WHERE id="" + id + "" AND no="" + no"
+before_88/String1.txt,"""UPDATE cart SET count="" + count + "" WHERE id="" + id + "" AND no="" + no"
+before_89/String1.txt,"""INSERT INTO wishlist VALUES ("" + id + "", "" + no + "")"""
+before_90/String1.txt,"""SELECT * FROM wishlist WHERE id="" + id + "" AND no="" + no"
+before_91/String1.txt,"""SELECT order_sq.nextval FROM dual"""
+before_92/String1.txt,"""SELECT * FROM book WHERE no = "" + no"
+before_93/String1.txt,"""SELECT DISTINCT order_num "" + ""FROM bespeak "" + ""WHERE id = "" + id + "" AND order_state NOT IN(7, 8, 9) "" + ""ORDER BY order_num DESC"""
+before_94/String1.txt,"""SELECT * FROM bespeak WHERE order_num = "" + order_num"
+before_95/String1.txt,"""SELECT * FROM shipping WHERE order_num = "" + order_num"
+before_97/String1.txt,"""SELECT COUNT(DISTINCT order_num) FROM bespeak WHERE order_state NOT IN(7, 8, 9)"""
+before_98/String1.txt,"""UPDATE bespeak SET order_state="" + state + "" WHERE order_num="" + num"
+before_99/String1.txt,"""INSERT INTO shipping VALUES ("" + order + "", "" + ship + "")"""

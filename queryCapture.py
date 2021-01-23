@@ -1,4 +1,4 @@
-'''
+
 import glob, os
 import csv
 from collections import defaultdict
@@ -520,3 +520,4 @@ with open('queries.csv') as csv_file:
             else:
                 f.write("Update"+aftercode9_4)
             f.close()
+'''
